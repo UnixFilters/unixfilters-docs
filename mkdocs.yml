@@ -2,8 +2,24 @@ site_name: UnixFilters
 theme:
   name: material
   language: fr
+  # logo: assets/logo.png
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: deep purple
+      accent: purple
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: deep purple
+      accent: purple
   features:
     - content.code.copy
+    - navigation.top
 
 markdown_extensions:
   - attr_list
@@ -22,5 +38,6 @@ nav:
       - Mise en place d'une tâche: help/init_task.md
       - Ajouter un bloc: help/add_block.md
       - Ajouter une commande: help/add_command.md
+      - Créer une catégorie: help/create_category.md
   - Documentation JavaScript: jsdoc/index.html
   - Documentation Checker: documentation_checker.md
