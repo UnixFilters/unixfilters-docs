@@ -213,6 +213,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -226,15 +248,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    Aide
+    Guide
     
   </span>
   
@@ -242,10 +264,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Aide
+            Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -410,12 +432,34 @@
   
   
     <li class="md-nav__item">
-      <a href="https://unixfilters.github.io/unixfilters-docs/" class="md-nav__link">
+      <a href="../../jsdoc/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Documentation JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation_checker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Checker
     
   </span>
   
@@ -509,108 +553,108 @@
 <li>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, ajouter le bloc dans sa catégorie correspondante.</li>
 </ol>
 <p>Exemple : Pour ajouter l'option -b[RANGE] , il faut ajouter son flag et son type.</p>
-<pre><code class="language-javascript">const OPTIONS = [
-  { flag: &quot;d&quot;, type: [&quot;flag&quot;, &quot;delimiter&quot;] },
-  (autres options...)
-  { flag: &quot;b&quot;, type: &quot;field_index&quot; },
-];
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">OPTIONS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">flag</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;flag&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;delimiter&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">(</span><span class="nx">autres</span><span class="w"> </span><span class="nx">options</span><span class="p">...)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">flag</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;field_index&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">];</span>
+</span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction makeOptionBlock(flag).</p>
 <ol>
 <li>Dans le fichier [task.js], ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>option_lettre_type</strong> où le type peut être flag/delimiter/field_index.</li>
 </ol>
 <p>Exemple :</p>
-<pre><code class="language-javascript">function initTask(subTask) {
-    includeBlocks: {
-        generatedBlocks: {
-            unixfilters: [
-                &quot;option_b_field_index&quot;
-            ],
-        },
-...
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nx">includeBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nx">generatedBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="nx">unixfilters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                </span><span class="s2">&quot;option_b_field_index&quot;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">...</span>
+</span></code></pre></div>
 <h2 id="ajouter-un-bloc-command">Ajouter un bloc COMMAND</h2>
 <ol>
 <li>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, ajouter le bloc dans sa catégorie correspondante.</li>
 </ol>
 <p>Exemple : Pour ajouter une commande nommée commandeexemple, il faut ajouter son nom à la liste.</p>
-<pre><code class="language-javascript">const COMMAND_NAMES = [
-    &quot;cat&quot;,
-    (autres commandes...),
-    &quot;commande_exemple&quot;
-    ];
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">COMMAND_NAMES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="s2">&quot;cat&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">(</span><span class="nx">autres</span><span class="w"> </span><span class="nx">commandes</span><span class="p">...),</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="s2">&quot;commande_exemple&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">];</span>
+</span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction makeUnixFilterBlock(commandName).</p>
 <ol>
 <li>Dans le fichier [task.js], ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>nomdelacommande</strong></li>
 </ol>
 <p>Exemple :</p>
-<pre><code class="language-javascript">function initTask(subTask) {
-    includeBlocks: {
-        generatedBlocks: {
-            unixfilters: [
-                &quot;cat&quot;,
-                &quot;commande_exemple&quot;
-            ],
-        },
-...
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">includeBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nx">generatedBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="nx">unixfilters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">                </span><span class="s2">&quot;cat&quot;</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                </span><span class="s2">&quot;commande_exemple&quot;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">...</span>
+</span></code></pre></div>
 <p>Lors de l'ajout d'une commande, il ne faut pas oublier de créer sa fonction correspondante dans le fichier commands.py <a href="../add_command/">voir la doc associée</a></p>
 <h2 id="ajouter-un-bloc-symbol">Ajouter un bloc SYMBOL</h2>
 <ol>
 <li>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, ajouter le bloc dans sa catégorie correspondante.</li>
 </ol>
 <p>Exemple : Pour ajouter le symbole symboleExemple, il faut ajouter son nom et sa couleur.</p>
-<pre><code class="language-javascript">const SYMBOL_NAMES = [
-  { name: &quot;symbol_greater_than&quot;, colour: 25 },
-  (autres symboles...)
-  { name: &quot;symbole_exemple&quot;, colour: 90 },
-];
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SYMBOL_NAMES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;symbol_greater_than&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">colour</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p">(</span><span class="nx">autres</span><span class="w"> </span><span class="nx">symboles</span><span class="p">...)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;symbole_exemple&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">colour</span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">];</span>
+</span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction makeSymbolBlock(symbolObject).</p>
 <ol>
 <li>Dans le fichier [task.js], ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>symbol_nomdusymbole</strong></li>
 </ol>
 <p>Exemple :</p>
-<pre><code class="language-javascript">function initTask(subTask) {
-    includeBlocks: {
-        generatedBlocks: {
-            unixfilters: [
-                &quot;cat&quot;,
-                &quot;symbol_symboleExemple&quot;
-            ],
-        },
-...
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">includeBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">        </span><span class="nx">generatedBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">            </span><span class="nx">unixfilters</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">                </span><span class="s2">&quot;cat&quot;</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                </span><span class="s2">&quot;symbol_symboleExemple&quot;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">...</span>
+</span></code></pre></div>
 <h2 id="ajouter-un-nouveau-bloc">Ajouter un nouveau bloc</h2>
 <p>Si aucune des structures de blocs ne vous convient, vous pouvez ajouter un nouveau bloc. Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, la création du bloc peut se faire :</p>
 <ul>
 <li>Avec une fonction (voir la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L260">makeGrepBlock()</a>)</li>
 <li>Avec une définition classique (voir le bloc <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L491">text_input</a>)</li>
 </ul>
-<pre><code class="language-javascript">        {
-          name: &quot;nom_du_bloc&quot;,
-          blocklyJson: {
-            message0: `%1 %2`, // Affichage des arguments
-            args0: [
-            // Ajouter un argument text input
-              {
-                type: &quot;field_input&quot;, // type de l'argument : saisie de texte
-                name: &quot;PARAM_1&quot;, // nom du paramètre (à laisser car on peut de ce fait réutiliser les fonctions d'extraction)
-                text: &quot;&quot;, // texte par défaut dans l'input
-              },
-            // Ajouter une encoche
-              {
-                type: &quot;input_value&quot;,
-                name: &quot;PARAM_0&quot;,
-              },
-            ],
-            // pièce de puzzle sortante
-            output: null,
-            colour: 165,
-          },
-        },
-</code></pre>
+<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">          </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;nom_du_bloc&quot;</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">          </span><span class="nx">blocklyJson</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">            </span><span class="nx">message0</span><span class="o">:</span><span class="w"> </span><span class="sb">`%1 %2`</span><span class="p">,</span><span class="w"> </span><span class="c1">// Affichage des arguments</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">            </span><span class="nx">args0</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">            </span><span class="c1">// Ajouter un argument text input</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">              </span><span class="p">{</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;field_input&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// type de l&#39;argument : saisie de texte</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">                </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PARAM_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// nom du paramètre (à laisser car on peut de ce fait réutiliser les fonctions d&#39;extraction)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">                </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// texte par défaut dans l&#39;input</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">              </span><span class="p">},</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">            </span><span class="c1">// Ajouter une encoche</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">              </span><span class="p">{</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input_value&quot;</span><span class="p">,</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">                </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PARAM_0&quot;</span><span class="p">,</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">              </span><span class="p">},</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">            </span><span class="c1">// pièce de puzzle sortante</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">            </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">            </span><span class="nx">colour</span><span class="o">:</span><span class="w"> </span><span class="mf">165</span><span class="p">,</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="p">},</span>
+</span></code></pre></div>
 
 
 
@@ -659,7 +703,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>

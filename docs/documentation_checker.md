@@ -11,22 +11,18 @@ Ce projet permet d'évaluer le code envoyé depuis l'[interface](https://github.
 │ ├── documentation_checker.md
 │ └── documentation_checker.py
 ├── exemple_checker
-│ ├── blocklyUnixFilters_lib.js
-│ ├── index.css
-│ ├── index.html
-│ ├── jsongenerator.js
-│ ├── taskSettings.json
-│ ├── tests
-│ │ ├── files
-│ │ │ ├── test01.in --> fichier pris en entrée par le checker
-│ │ │ ├── test01.out --> json obtenu après exécution du code
-│ │ │ └── test01.solout --> résultat attendu
-│ │ └── gen
-│ │ ├── checker.py --> logique permettant d'\évaluer le score et renvoyer le feedback
-│ │ ├── commands.py --> librairie exécutant les commandes
-│ │ ├── livres.txt --> exemple de fichier d'entrée
-│ │ └── solution.py --> contient le code généré par les blocs
-│ └── unixfilters.js
+│ └── tests
+│  ├── copie de la librairie blockly
+│  │ └── ...
+│  ├── files
+│  │ ├── test01.in # Fichier pris en entrée par le checker
+│  │ ├── test01.out # JSON obtenu après exécution du code
+│  │ └── test01.solout # Résultat attendu
+│  └── gen
+│    ├── checker.py # Logique permettant d'évaluer le score et renvoyer le feedback
+│    ├── commands.py # Librairie exécutant les commandes
+│    ├── livres.txt # Exemple de fichier d'entrée
+│    └── solution.py # Contient le code généré par les blocs
 ├── index.css
 ├── index.html
 ├── jsongenerator.js

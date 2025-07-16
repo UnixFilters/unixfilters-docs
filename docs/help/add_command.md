@@ -4,7 +4,7 @@
 
 Exemple : Pour ajouter la commande awk
 
-```python
+```python title="commands.py"
 def awk(arguments=None):
     run_command("awk", arguments=arguments)
 ```

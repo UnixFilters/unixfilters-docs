@@ -9,11 +9,12 @@ Cette documentation explique comment créer une tâche pour le projet **UnixFilt
 
 ## Ajouter des blocs à une tâche
 
-Les blocs sont configurés dans le fichier [`task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js). Il contient les blocs que l’utilisateur pourra manipuler dans l’interface.
+Dans **unixfilters** :
+Les blocs sont configurés dans le fichier [`public/task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js). Il contient les blocs que l’utilisateur pourra manipuler dans l’interface.
 
-### Exemple
+**Exemple :**
 
-```javascript
+```javascript title="task.js"
 function initTask(subTask) {
   subTask.gridInfos = {
     hideSaveOrLoad: false,
@@ -34,11 +35,13 @@ function initTask(subTask) {
 }
 ```
 
+(AJOUTER FORMAT NOMS BLOCS OPTION)
+
 ### `groupByCategory`
 
 L'option groupByCategory indique si les blocs sont affichés groupés par type de commande ou en vrac :
 
-#### Exemple
+**Exemple :**
 
 | `groupByCategory: true`             | `groupByCategory: false`             |
 | ----------------------------------- | ------------------------------------ |
@@ -52,15 +55,15 @@ Chaque option est associée à une commande principale (comme `grep`, `sed`, etc
 Le bloc `option_i_flag_grep` est conçu pour `grep`, mais fonctionne aussi avec `sed` :
 `option_i_flag_sed`.
 
-La liste des compatibilités est disponible dans le fichier `unixfilters.js` dans le dictionnaire [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375)
+La liste des compatibilités est disponible dans le fichier `public/unixfilters.js` dans le dictionnaire [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375)
 
 ## Modifier l'énoncé
 
-L’énoncé de la tâche est dans le fichier [`index.html`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/index.html), dans la section `#taskContent`.
+L’énoncé de la tâche est dans le fichier [`public/index.html`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/index.html), dans la section `#taskContent`.
 
-### Exemple
+**Exemple :**
 
-```html
+```html title="index.html"
 <div id="taskContent">
   <div id="taskIntro">
     <p>
@@ -78,17 +81,41 @@ L’énoncé de la tâche est dans le fichier [`index.html`](https://github.com/
 
 ## Ajouter le fichier manipulé
 
-Dans le checker, ajouter un fichier d'entrée dans le dossier [`gen`](https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen)
+Dans **checker**, ajouter un fichier d'entrée dans le dossier [`checker/tree/main/exemple_checker/tests/gen`](https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen)
 Ce fichier représente les données que la commande Unix doit manipuler dans l’exercice.
+
+**Exemple :**
+
+```txt title="livres.txt"
+Le Petit Prince - Antoine de Saint Exupéry - 1943
+1984 - George Orwell - 1949
+Harry Potter à l'école des sorciers - J.K. Rowling - 1997
+Le Seigneur des Anneaux - J.R.R. Tolkien - 1954
+Dune - Frank Herbert - 1965
+Fondation - Isaac Asimov - 1951
+```
 
 ## Vérification du résultat
 
 La vérification se fait dans le checker, à l’aide de plusieurs fichiers :
 
-Dans le checker, dans le fichier [`test01.out`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out), ajouter la solution attendue par l'exercice. Par exemple, pour un exercice attendant un cat du fichier, mettre le contenu du fichier manioulé dans test01.out.
+Dans le checker, dans le fichier [`checker/blob/main/exemple_checker/tests/files/test01.out`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out), ajouter la solution attendue par l'exercice.
 
-### Exemple
+**Exemple :**
 
-Si l’utilisateur doit exécuter `cat monfichier.txt`, placez le contenu attendu de ce fichier dans `test01.out`.
+Si l’utilisateur doit exécuter `cat livres.txt`, placez le contenu attendu de ce fichier dans `test01.out`.
 
-Le fichier [`checker.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py) compare ensuite le résultat obtenu en exécutant le code généré par les blocs et la solution dans test01.solout, en enlevant les espaces et retour à la ligne, et renvoie un objet. Pour en savoir plus, consultez la [documentation du checker](../documentation_checker.md)
+```txt title="test01.out"
+Le Petit Prince - Antoine de Saint Exupéry - 1943
+1984 - George Orwell - 1949
+Harry Potter à l'école des sorciers - J.K. Rowling - 1997
+Le Seigneur des Anneaux - J.R.R. Tolkien - 1954
+Dune - Frank Herbert - 1965
+Fondation - Isaac Asimov - 1951
+```
+
+Le fichier [`exemple_checker/tests/gen/checker.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py) compare ensuite le résultat obtenu en exécutant le code généré par les blocs et la solution dans test01.solout, en enlevant les espaces et retour à la ligne, et renvoie un objet. Pour en savoir plus, consultez la [documentation du checker](../documentation_checker.md) (pas complet)
+
+## Tester
+
+Dans l'interface, placez des blocs pour tester la présence du fichier et la solution.

@@ -6,7 +6,7 @@
 
 Exemple : Pour ajouter l'option -b\[RANGE\] , il faut ajouter son flag et son type.
 
-```javascript
+```javascript title="blocklyUnixFilters_lib.js"
 const OPTIONS = [
   { flag: "d", type: ["flag", "delimiter"] },
   (autres options...)
@@ -20,7 +20,7 @@ Le bloc sera créé automatiquement grâce à la fonction makeOptionBlock(flag).
 
 Exemple :
 
-```javascript
+```javascript title="task.js"
 function initTask(subTask) {
     includeBlocks: {
         generatedBlocks: {
@@ -37,7 +37,7 @@ function initTask(subTask) {
 
 Exemple : Pour ajouter une commande nommée commandeexemple, il faut ajouter son nom à la liste.
 
-```javascript
+```javascript title="blocklyUnixFilters_lib.js"
 const COMMAND_NAMES = [
     "cat",
     (autres commandes...),
@@ -51,7 +51,7 @@ Le bloc sera créé automatiquement grâce à la fonction makeUnixFilterBlock(co
 
 Exemple :
 
-```javascript
+```javascript title="task.js"
 function initTask(subTask) {
     includeBlocks: {
         generatedBlocks: {
@@ -71,7 +71,7 @@ Lors de l'ajout d'une commande, il ne faut pas oublier de créer sa fonction cor
 
 Exemple : Pour ajouter le symbole symboleExemple, il faut ajouter son nom et sa couleur.
 
-```javascript
+```javascript title="blocklyUnixFilters_lib.js"
 const SYMBOL_NAMES = [
   { name: "symbol_greater_than", colour: 25 },
   (autres symboles...)
@@ -85,7 +85,7 @@ Le bloc sera créé automatiquement grâce à la fonction makeSymbolBlock(symbol
 
 Exemple :
 
-```javascript
+```javascript title="task.js"
 function initTask(subTask) {
     includeBlocks: {
         generatedBlocks: {
@@ -104,7 +104,7 @@ Si aucune des structures de blocs ne vous convient, vous pouvez ajouter un nouve
 - Avec une fonction (voir la fonction [makeGrepBlock()](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L260))
 - Avec une définition classique (voir le bloc [text_input](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L491))
 
-```javascript
+```javascript title="blocklyUnixFilters_lib.js"
         {
           name: "nom_du_bloc",
           blocklyJson: {
