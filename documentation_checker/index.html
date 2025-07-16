@@ -492,30 +492,30 @@
 <h1 id="documentation-du-checker">Documentation du checker</h1>
 <p>Ce projet permet d'évaluer le code envoyé depuis l'<a href="https://github.com/UnixFilters/unixfilters-franceIOI/tree/main">interface</a>, en comparant la sortie produite par le code avec une sortie attendue.</p>
 <h2 id="architecture">Architecture</h2>
-<pre><code class="language-bash">.
-├── blocklyUnixFilters_lib.js
-├── docs
-│ ├── documentation_checker.md
-│ └── documentation_checker.py
-├── exemple_checker
-│ └── tests
-│  ├── copie de la librairie blockly
-│  │ └── ...
-│  ├── files
-│  │ ├── test01.in # Fichier pris en entrée par le checker
-│  │ ├── test01.out # JSON obtenu après exécution du code
-│  │ └── test01.solout # Résultat attendu
-│  └── gen
-│    ├── checker.py # Logique permettant d'évaluer le score et renvoyer le feedback
-│    ├── commands.py # Librairie exécutant les commandes
-│    ├── livres.txt # Exemple de fichier d'entrée
-│    └── solution.py # Contient le code généré par les blocs
-├── index.css
-├── index.html
-├── jsongenerator.js
-├── task.js
-└── unixfilters.js
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├──<span class="w"> </span>blocklyUnixFilters_lib.js
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──<span class="w"> </span>docs
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│<span class="w"> </span>├──<span class="w"> </span>documentation_checker.md
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│<span class="w"> </span>└──<span class="w"> </span>documentation_checker.py
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├──<span class="w"> </span>exemple_checker
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│<span class="w"> </span>└──<span class="w"> </span>tests
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│<span class="w">  </span>├──<span class="w"> </span>copie<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>librairie<span class="w"> </span>blockly
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│<span class="w">  </span>│<span class="w"> </span>└──<span class="w"> </span>...
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│<span class="w">  </span>├──<span class="w"> </span>files
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│<span class="w">  </span>│<span class="w"> </span>├──<span class="w"> </span>test01.in<span class="w"> </span><span class="c1"># Fichier pris en entrée par le checker</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│<span class="w">  </span>│<span class="w"> </span>├──<span class="w"> </span>test01.out<span class="w"> </span><span class="c1"># JSON obtenu après exécution du code</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│<span class="w">  </span>│<span class="w"> </span>└──<span class="w"> </span>test01.solout<span class="w"> </span><span class="c1"># Résultat attendu</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│<span class="w">  </span>└──<span class="w"> </span>gen
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│<span class="w">    </span>├──<span class="w"> </span>checker.py<span class="w"> </span><span class="c1"># Logique permettant d&#39;évaluer le score et renvoyer le feedback</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│<span class="w">    </span>├──<span class="w"> </span>commands.py<span class="w"> </span><span class="c1"># Librairie exécutant les commandes</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│<span class="w">    </span>├──<span class="w"> </span>livres.txt<span class="w"> </span><span class="c1"># Exemple de fichier d&#39;entrée</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│<span class="w">    </span>└──<span class="w"> </span>solution.py<span class="w"> </span><span class="c1"># Contient le code généré par les blocs</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├──<span class="w"> </span>index.css
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├──<span class="w"> </span>index.html
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├──<span class="w"> </span>jsongenerator.js
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├──<span class="w"> </span>task.js
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>└──<span class="w"> </span>unixfilters.js
+</span></code></pre></div>
 
 
 
