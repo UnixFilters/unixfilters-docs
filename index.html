@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#getting-tarted" class="md-skip">
           Aller au contenu
         </a>
       
@@ -287,48 +287,6 @@
   <a href="#mode-production" class="md-nav__link">
     <span class="md-ellipsis">
       Mode production
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arborescence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arborescence
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Arborescence">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#interface-blocklyjavascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interface Blockly/JavaScript
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#librairie-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Librairie Python
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suite-de-la-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suite de la documentation
     </span>
   </a>
   
@@ -577,48 +535,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#arborescence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arborescence
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Arborescence">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#interface-blocklyjavascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interface Blockly/JavaScript
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#librairie-python" class="md-nav__link">
-    <span class="md-ellipsis">
-      Librairie Python
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suite-de-la-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suite de la documentation
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -635,7 +551,7 @@
 
 
 
-<h1 id="getting-started">Getting started</h1>
+<h1 id="getting-tarted">Getting tarted</h1>
 <h2 id="prerequis">Prérequis</h2>
 <ul>
 <li>Python 3.8+</li>
@@ -711,29 +627,6 @@ PATH_FILES = os.path.join(PATH_BASE, &quot;files&quot;)
 </code></pre>
 <h2 id="mode-production">Mode production</h2>
 <p>Ajouter les fichiers modifiés sur le SVN</p>
-<h2 id="arborescence">Arborescence</h2>
-<h3 id="interface-blocklyjavascript">Interface Blockly/JavaScript</h3>
-<p><a href="help/add_block/">Voir l'aide</a></p>
-<pre><code class="language-bash">.
-├── blocklyUnixFilters_lib.js # Librairie contenant la définition des blocs
-├── index.css # Style de la page html
-├── index.html # Contenu de la tâche
-├── jsongenerator.js # Génération du code pour chaque bloc
-├── task.js # Contient les paramètres de la tâche (blocs disponibles, nombre de blocs autorisés,...)
-└── unixfilters.js # Logique de l'affichage et de l'envoi de la commande au serveur
-</code></pre>
-<h3 id="librairie-python">Librairie Python</h3>
-<p><a href="help/add_command/">Voir l'aide</a></p>
-<pre><code class="language-bash">.
-├── commands.py # Librairie définissant les différents filtres et exécutant la commande
-└── server.py # Reçoit le code généré par les blocs et utilise la librairie pour récupérer le résultat et le renvoyer au front
-</code></pre>
-<h2 id="suite-de-la-documentation">Suite de la documentation</h2>
-<ul>
-<li><a href="https://unixfilters.github.io/unixfilters-docs/">Documentation fonctions</a></li>
-<li><a href="https://github.com/UnixFilters/checker/blob/main/docs/documentation_checker.md">Documentation checker</a></li>
-<li><a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/docs/init_task.md">Mise en place d'une tâche</a></li>
-</ul>
 
 
 

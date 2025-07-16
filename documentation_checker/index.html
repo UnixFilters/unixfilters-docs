@@ -476,22 +476,18 @@
 │ ├── documentation_checker.md
 │ └── documentation_checker.py
 ├── exemple_checker
-│ ├── blocklyUnixFilters_lib.js
-│ ├── index.css
-│ ├── index.html
-│ ├── jsongenerator.js
-│ ├── taskSettings.json
-│ ├── tests
-│ │ ├── files
-│ │ │ ├── test01.in --&gt; fichier pris en entrée par le checker
-│ │ │ ├── test01.out --&gt; json obtenu après exécution du code
-│ │ │ └── test01.solout --&gt; résultat attendu
-│ │ └── gen
-│ │ ├── checker.py --&gt; logique permettant d'\évaluer le score et renvoyer le feedback
-│ │ ├── commands.py --&gt; librairie exécutant les commandes
-│ │ ├── livres.txt --&gt; exemple de fichier d'entrée
-│ │ └── solution.py --&gt; contient le code généré par les blocs
-│ └── unixfilters.js
+│ └── tests
+│  ├── copie de la librairie blockly
+│  │ └── ...
+│  ├── files
+│  │ ├── test01.in # Fichier pris en entrée par le checker
+│  │ ├── test01.out # JSON obtenu après exécution du code
+│  │ └── test01.solout # Résultat attendu
+│  └── gen
+│    ├── checker.py # Logique permettant d'évaluer le score et renvoyer le feedback
+│    ├── commands.py # Librairie exécutant les commandes
+│    ├── livres.txt # Exemple de fichier d'entrée
+│    └── solution.py # Contient le code généré par les blocs
 ├── index.css
 ├── index.html
 ├── jsongenerator.js
