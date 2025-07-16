@@ -316,35 +316,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#groupbycategory" class="md-nav__link">
     <span class="md-ellipsis">
       groupByCategory
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="groupByCategory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -369,21 +345,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modifier l&#39;énoncé">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -401,21 +362,6 @@
       Vérification du résultat
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Vérification du résultat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -562,35 +508,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#groupbycategory" class="md-nav__link">
     <span class="md-ellipsis">
       groupByCategory
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="groupByCategory">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -615,21 +537,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Modifier l&#39;énoncé">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -647,21 +554,6 @@
       Vérification du résultat
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Vérification du résultat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemple
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -691,7 +583,7 @@
 </ul>
 <h2 id="ajouter-des-blocs-a-une-tache">Ajouter des blocs à une tâche</h2>
 <p>Les blocs sont configurés dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>task.js</code></a>. Il contient les blocs que l’utilisateur pourra manipuler dans l’interface.</p>
-<h3 id="exemple">Exemple</h3>
+<p><strong>Exemple :</strong></p>
 <pre><code class="language-javascript">function initTask(subTask) {
   subTask.gridInfos = {
     hideSaveOrLoad: false,
@@ -713,7 +605,7 @@
 </code></pre>
 <h3 id="groupbycategory"><code>groupByCategory</code></h3>
 <p>L'option groupByCategory indique si les blocs sont affichés groupés par type de commande ou en vrac :</p>
-<h4 id="exemple_1">Exemple</h4>
+<p><strong>Exemple :</strong></p>
 <table>
 <thead>
 <tr>
@@ -736,7 +628,7 @@ Le bloc <code>option_i_flag_grep</code> est conçu pour <code>grep</code>, mais 
 <p>La liste des compatibilités est disponible dans le fichier <code>unixfilters.js</code> dans le dictionnaire <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a></p>
 <h2 id="modifier-lenonce">Modifier l'énoncé</h2>
 <p>L’énoncé de la tâche est dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/index.html"><code>index.html</code></a>, dans la section <code>#taskContent</code>.</p>
-<h3 id="exemple_2">Exemple</h3>
+<p><strong>Exemple :</strong></p>
 <pre><code class="language-html">&lt;div id=&quot;taskContent&quot;&gt;
   &lt;div id=&quot;taskIntro&quot;&gt;
     &lt;p&gt;
@@ -757,7 +649,7 @@ Ce fichier représente les données que la commande Unix doit manipuler dans l�
 <h2 id="verification-du-resultat">Vérification du résultat</h2>
 <p>La vérification se fait dans le checker, à l’aide de plusieurs fichiers :</p>
 <p>Dans le checker, dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out"><code>test01.out</code></a>, ajouter la solution attendue par l'exercice. Par exemple, pour un exercice attendant un cat du fichier, mettre le contenu du fichier manioulé dans test01.out.</p>
-<h3 id="exemple_3">Exemple</h3>
+<p><strong>Exemple :</strong></p>
 <p>Si l’utilisateur doit exécuter <code>cat monfichier.txt</code>, placez le contenu attendu de ce fichier dans <code>test01.out</code>.</p>
 <p>Le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py"><code>checker.py</code></a> compare ensuite le résultat obtenu en exécutant le code généré par les blocs et la solution dans test01.solout, en enlevant les espaces et retour à la ligne, et renvoie un objet. Pour en savoir plus, consultez la <a href="../../documentation_checker/">documentation du checker</a></p>
 
