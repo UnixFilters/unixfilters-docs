@@ -81,7 +81,7 @@ L’énoncé de la tâche est dans le fichier [`public/index.html`](https://gith
 
 ## Ajouter le fichier manipulé
 
-Dans **checker**, ajouter un fichier d'entrée dans le dossier [`checker/tree/main/exemple_checker/tests/gen`](https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen)
+Dans **checker**, ajouter un fichier d'entrée dans le dossier [`exemple_checker/tests/gen`](https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen)
 Ce fichier représente les données que la commande Unix doit manipuler dans l’exercice.
 
 **Exemple :**
@@ -99,7 +99,7 @@ Fondation - Isaac Asimov - 1951
 
 La vérification se fait dans le checker, à l’aide de plusieurs fichiers :
 
-Dans le checker, dans le fichier [`checker/blob/main/exemple_checker/tests/files/test01.out`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out), ajouter la solution attendue par l'exercice.
+Dans le checker, dans le fichier [`exemple_checker/tests/files/test01.out`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out), ajouter la solution attendue par l'exercice.
 
 **Exemple :**
 
@@ -118,4 +118,5 @@ Le fichier [`exemple_checker/tests/gen/checker.py`](https://github.com/UnixFilte
 
 ## Tester
 
-Dans l'interface, placez des blocs pour tester la présence du fichier et la solution.
+Redémarrez le serveur Node et le serveur Python.
+Dans l'interface, faites un cat du fichier ajouté pour vérifier.

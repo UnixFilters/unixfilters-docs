@@ -686,7 +686,7 @@ Le bloc <code>option_i_flag_grep</code> est conçu pour <code>grep</code>, mais 
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <h2 id="ajouter-le-fichier-manipule">Ajouter le fichier manipulé</h2>
-<p>Dans <strong>checker</strong>, ajouter un fichier d'entrée dans le dossier <a href="https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen"><code>checker/tree/main/exemple_checker/tests/gen</code></a>
+<p>Dans <strong>checker</strong>, ajouter un fichier d'entrée dans le dossier <a href="https://github.com/UnixFilters/checker/tree/main/exemple_checker/tests/gen"><code>exemple_checker/tests/gen</code></a>
 Ce fichier représente les données que la commande Unix doit manipuler dans l’exercice.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-text highlight"><span class="filename">livres.txt</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Le Petit Prince - Antoine de Saint Exupéry - 1943
@@ -698,7 +698,7 @@ Ce fichier représente les données que la commande Unix doit manipuler dans l�
 </span></code></pre></div>
 <h2 id="verification-du-resultat">Vérification du résultat</h2>
 <p>La vérification se fait dans le checker, à l’aide de plusieurs fichiers :</p>
-<p>Dans le checker, dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out"><code>checker/blob/main/exemple_checker/tests/files/test01.out</code></a>, ajouter la solution attendue par l'exercice.</p>
+<p>Dans le checker, dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.out"><code>exemple_checker/tests/files/test01.out</code></a>, ajouter la solution attendue par l'exercice.</p>
 <p><strong>Exemple :</strong></p>
 <p>Si l’utilisateur doit exécuter <code>cat livres.txt</code>, placez le contenu attendu de ce fichier dans <code>test01.out</code>.</p>
 <div class="language-text highlight"><span class="filename">test01.out</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Le Petit Prince - Antoine de Saint Exupéry - 1943
@@ -710,7 +710,8 @@ Ce fichier représente les données que la commande Unix doit manipuler dans l�
 </span></code></pre></div>
 <p>Le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py"><code>exemple_checker/tests/gen/checker.py</code></a> compare ensuite le résultat obtenu en exécutant le code généré par les blocs et la solution dans test01.solout, en enlevant les espaces et retour à la ligne, et renvoie un objet. Pour en savoir plus, consultez la <a href="../../documentation_checker/">documentation du checker</a> (pas complet)</p>
 <h2 id="tester">Tester</h2>
-<p>Dans l'interface, placez des blocs pour tester la présence du fichier et la solution.</p>
+<p>Redémarrez le serveur Node et le serveur Python.
+Dans l'interface, faites un cat du fichier ajouté pour vérifier.</p>
 
 
 
