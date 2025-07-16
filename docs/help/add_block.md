@@ -2,7 +2,7 @@
 
 ## Ajouter un bloc OPTION
 
-1. Dans le fichier [blocklyUnixFilters_lib.js], ajouter le bloc dans sa catégorie correspondante.\
+1. Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter le bloc dans sa catégorie correspondante.
 
 Exemple : Pour ajouter l'option -b\[RANGE\] , il faut ajouter son flag et son type.
 
@@ -33,7 +33,7 @@ function initTask(subTask) {
 
 ## Ajouter un bloc COMMAND
 
-1. Dans le fichier [blocklyUnixFilters_lib.js], ajouter le bloc dans sa catégorie correspondante.\
+1. Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter le bloc dans sa catégorie correspondante.
 
 Exemple : Pour ajouter une commande nommée commandeexemple, il faut ajouter son nom à la liste.
 
@@ -63,11 +63,11 @@ function initTask(subTask) {
 ...
 ```
 
-Lors de l'ajout d'une commande, il ne faut pas oublier de créer sa fonction correspondante dans le fichier commands.py [voir la doc associée](../lib_py/add_command.md)
+Lors de l'ajout d'une commande, il ne faut pas oublier de créer sa fonction correspondante dans le fichier commands.py [voir la doc associée](./add_command.md)
 
 ## Ajouter un bloc SYMBOL
 
-1. Dans le fichier [blocklyUnixFilters_lib.js], ajouter le bloc dans sa catégorie correspondante.\
+1. Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter le bloc dans sa catégorie correspondante.
 
 Exemple : Pour ajouter le symbole symboleExemple, il faut ajouter son nom et sa couleur.
 
@@ -99,10 +99,10 @@ function initTask(subTask) {
 
 ## Ajouter un nouveau bloc
 
-Si aucune des structures de blocs ne vous convient, vous pouvez ajouter un nouveau bloc. Dans le fichier [blocklyUnixFilters_lib.js], la création du bloc peut se faire :
+Si aucune des structures de blocs ne vous convient, vous pouvez ajouter un nouveau bloc. Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), la création du bloc peut se faire :
 
-- Avec une fonction (voir la fonction makeGrepBlock())
-- Avec une définition classique (voir le bloc text_input)
+- Avec une fonction (voir la fonction [makeGrepBlock()](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L260))
+- Avec une définition classique (voir le bloc [text_input](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L491))
 
 ```javascript
         {

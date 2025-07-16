@@ -1,0 +1,13 @@
+site_name: UnixFilters
+theme:
+  name: material
+  language: fr
+
+nav:
+  - Accueil: index.md
+  - Aide:
+      - Mise en place d'une tâche: help/init_task.md
+      - Ajouter un bloc: help/add_block.md
+      - Ajouter une commande: help/add_command.md
+  - Documentation JavaScript: https://unixfilters.github.io/unixfilters-docs/
+  - Documentation Checker: documentation_checker.md
