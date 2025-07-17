@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../add_new_block/">
+        <link rel="prev" href="../create_category/">
       
       
-        <link rel="next" href="../list_blocks/">
+        <link rel="next" href="../../documentation_checker/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Créer une catégorie - UnixFilters</title>
+        <title>Liste des blocs existants - UnixFilters</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creer-une-categorie" class="md-skip">
+        <a href="#liste-des-blocs-existants" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Créer une catégorie
+              Liste des blocs existants
             
           </span>
         </div>
@@ -458,6 +458,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Créer une catégorie
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -470,90 +493,7 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Créer une catégorie
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Créer une catégorie
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-la-categorie-dans-le-contexte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter la catégorie dans le contexte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-la-categorie-dans-customblocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter la catégorie dans customBlocks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-une-couleur-de-categorie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter une couleur de catégorie
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../list_blocks/" class="md-nav__link">
         
   
   
@@ -564,6 +504,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -741,41 +682,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-la-categorie-dans-le-contexte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter la catégorie dans le contexte
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-la-categorie-dans-customblocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter la catégorie dans customBlocks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ajouter-une-couleur-de-categorie" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ajouter une couleur de catégorie
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -790,70 +696,75 @@
 
 
 
-<h1 id="creer-une-categorie">Créer une catégorie</h1>
-<p>Actuellement, il existe 4 types de catégorie :</p>
-<ul>
-<li>Catégorie <strong>Redirections</strong> : Contient les différents symboles de redirection (&lt;, &gt;, &gt;&gt;)</li>
-<li>Catégorie <strong>Entrée</strong> : Contient un bloc d'entrée de texte</li>
-<li>Catégorie <strong>Noop</strong> : Contient les blocs no-operation, qui sont utilisés pour complèter chaque bloc lors du lancement de la commande</li>
-<li>Catégorie de <strong>commande</strong> : Il en existe autant qu'il existe de commande. Chaque catégorie contient la commande du même nom, ainsi que les options compatibles</li>
-</ul>
-<p>Les catégories sont attribuées dès la création d'un bloc. Lorsque vous ajoutez une option, une commande, un noop, ou un symbole, sa catégorie est attribuée automatiquement lors de sa création.</p>
-<p>Pour créer une nouvelle catégorie, dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js"><code>public/blocklyUnixFilters_lib.js</code></a>, il faut :</p>
-<h2 id="ajouter-la-categorie-dans-le-contexte">Ajouter la catégorie dans le contexte</h2>
-<p>Dans la variable localLanguageStrings, il faut ajouter le nom de la catégorie ainsi que le nom qui sera affiché dans l'interface.</p>
-<p><strong>Exemple :</strong>
-Pour créer la catégorie test :</p>
-<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">getContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">display</span><span class="p">,</span><span class="w"> </span><span class="nx">infos</span><span class="p">,</span><span class="w"> </span><span class="nx">curLevel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">localLanguageStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">fr</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nx">categories</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span>
-</span></span></code></pre></div>
-<p>Dans l'interface, la catégorie aura le nom <code>TEST</code>.</p>
-<h2 id="ajouter-la-categorie-dans-customblocks">Ajouter la catégorie dans <code>customBlocks</code></h2>
-<p>Dans le namespace unixfilters, ajouter la catégorie.
-Si la catégorie est remplie via une autre fonction, laisser un tableau vide. Sinon, ajouter le bloc à l'intérieur.</p>
-<p><strong>Exemple :</strong></p>
-<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">context</span><span class="p">.</span><span class="nx">customBlocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">unixfilters</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// La catégorie test contient le block_test</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="p">{</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;block_test&quot;</span><span class="p">,</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nx">blocklyJson</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="nx">message0</span><span class="o">:</span><span class="w"> </span><span class="sb">`%1 %2`</span><span class="p">,</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="nx">args0</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">              </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;field_input&quot;</span><span class="p">,</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">              </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PARAM_1&quot;</span><span class="p">,</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">              </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a-z&quot;</span><span class="p">,</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="p">},</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">              </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input_value&quot;</span><span class="p">,</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">              </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;PARAM_0&quot;</span><span class="p">,</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="p">},</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="p">],</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">          </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">          </span><span class="nx">colour</span><span class="o">:</span><span class="w"> </span><span class="mf">165</span><span class="p">,</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">},</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">},</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">],</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="c1">// OU la catégorie test ne contient rien / est remplie lors de la création des blocs via une fonction</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="hll"><span class="w">    </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
-</span></span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">};</span>
-</span></code></pre></div>
-<h2 id="ajouter-une-couleur-de-categorie">Ajouter une couleur de catégorie</h2>
-<p><strong>Exemple :</strong></p>
-<div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">context</span><span class="p">.</span><span class="nx">provideBlocklyColours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">categories</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="hll"><span class="w">      </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
-</span></span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">};</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">};</span>
-</span></code></pre></div>
+<h1 id="liste-des-blocs-existants">Liste des blocs existants</h1>
+<p>Cliquez sur 📋 pour copier le nom de l'option dans le presse-papier.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Commande</th>
+      <th>Option (-flag)</th>
+      <th>Nom de l'option</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr><td rowspan="1"><code>cat</code></td><td></td><td></td><td><button ></button></td></tr>
+
+    <tr><td rowspan="4"><code>cut</code></td><td>-b[FIELD_INDEX]</td><td><code>option_b_field_index_cut_lower</code></td><td><button onclick="copyToClipboard('option_b_field_index_cut_lower', this)">📋</button></td></tr>
+    <tr><td>-c[FIELD_INDEX]</td><td><code>option_c_field_index_cut_lower</code></td><td><button onclick="copyToClipboard('option_c_field_index_cut_lower', this)">📋</button></td></tr>
+    <tr><td>-d[DELIMITER]</td><td><code>option_d_field_index_cut_lower</code></td><td><button onclick="copyToClipboard('option_d_field_index_cut_lower', this)">📋</button></td></tr>
+    <tr><td>-f[FIELD_INDEX]</td><td><code>option_f_field_index_cut_lower</code></td><td><button onclick="copyToClipboard('option_f_field_index_cut_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="8"><code>grep</code></td><td>-c</td><td><code>option_c_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_c_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-i</td><td><code>option_i_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_i_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-l</td><td><code>option_l_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_l_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-n</td><td><code>option_n_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_n_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-r</td><td><code>option_r_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_r_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-v</td><td><code>option_v_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_v_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-w</td><td><code>option_w_flag_grep_lower</code></td><td><button onclick="copyToClipboard('option_w_flag_grep_lower', this)">📋</button></td></tr>
+    <tr><td>-F</td><td><code>option_f_flag_grep_upper</code></td><td><button onclick="copyToClipboard('option_f_flag_grep_upper', this)">📋</button></td></tr>
+
+    <tr><td rowspan="2"><code>head</code></td><td>-c[FIELD_INDEX]</td><td><code>option_c_field_index_head_lower</code></td><td><button onclick="copyToClipboard('option_c_field_index_head_lower', this)">📋</button></td></tr>
+    <tr><td>-n[FIELD_INDEX]</td><td><code>option_n_field_index_head_lower</code></td><td><button onclick="copyToClipboard('option_n_field_index_head_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="4"><code>sort</code></td><td>-k[FIELD_INDEX]</td><td><code>option_k_field_index_sort_lower</code></td><td><button onclick="copyToClipboard('option_k_field_index_sort_lower', this)">📋</button></td></tr>
+    <tr><td>-n</td><td><code>option_n_flag_sort_lower</code></td><td><button onclick="copyToClipboard('option_n_flag_sort_lower', this)">📋</button></td></tr>
+    <tr><td>-r</td><td><code>option_r_flag_sort_lower</code></td><td><button onclick="copyToClipboard('option_r_flag_sort_lower', this)">📋</button></td></tr>
+    <tr><td>-u</td><td><code>option_u_flag_sort_lower</code></td><td><button onclick="copyToClipboard('option_u_flag_sort_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="2"><code>tail</code></td><td>-c[FIELD_INDEX]</td><td><code>option_c_field_index_tail_lower</code></td><td><button onclick="copyToClipboard('option_c_field_index_tail_lower', this)">📋</button></td></tr>
+    <tr><td>-n[FIELD_INDEX]</td><td><code>option_n_field_index_tail_lower</code></td><td><button onclick="copyToClipboard('option_n_field_index_tail_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="1"><code>tee</code></td><td>-a</td><td><code>option_a_flag_tee_lower</code></td><td><button onclick="copyToClipboard('option_a_flag_tee_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="2"><code>tr</code></td><td>-d</td><td><code>option_d_flag_tr_lower</code></td><td><button onclick="copyToClipboard('option_d_flag_tr_lower', this)">📋</button></td></tr>
+    <tr><td>-s</td><td><code>option_s_flag_tr_lower</code></td><td><button onclick="copyToClipboard('option_s_flag_tr_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="1"><code>uniq</code></td><td>-c</td><td><code>option_c_flag_uniq_lower</code></td><td><button onclick="copyToClipboard('option_c_flag_uniq_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="3"><code>sed</code></td><td>-i</td><td><code>option_i_flag_sed_lower</code></td><td><button onclick="copyToClipboard('option_i_flag_sed_lower', this)">📋</button></td></tr>
+    <tr><td>-n</td><td><code>option_n_flag_sed_lower</code></td><td><button onclick="copyToClipboard('option_n_flag_sed_lower', this)">📋</button></td></tr>
+    <tr><td>-r</td><td><code>option_r_flag_sed_lower</code></td><td><button onclick="copyToClipboard('option_r_flag_sed_lower', this)">📋</button></td></tr>
+
+    <tr><td rowspan="4"><code>wc</code></td><td>-c</td><td><code>option_c_flag_wc_lower</code></td><td><button onclick="copyToClipboard('option_c_flag_wc_lower', this)">📋</button></td></tr>
+    <tr><td>-l</td><td><code>option_l_flag_wc_lower</code></td><td><button onclick="copyToClipboard('option_l_flag_wc_lower', this)">📋</button></td></tr>
+    <tr><td>-m</td><td><code>option_m_flag_wc_lower</code></td><td><button onclick="copyToClipboard('option_m_flag_wc_lower', this)">📋</button></td></tr>
+    <tr><td>-w</td><td><code>option_w_flag_wc_lower</code></td><td><button onclick="copyToClipboard('option_w_flag_wc_lower', this)">📋</button></td></tr>
+
+  </tbody>
+</table>
+
+<script>
+  function copyToClipboard(text, button) {
+    navigator.clipboard.writeText(text).then(() => {
+      button.textContent = '✅'; 
+      setTimeout(() => {// Réinitialiser l'emoji après 2 secondes
+      }, 2000);
+    });
+  }
+</script>
+
+<p>// Ajouter le tableau de symbole et option</p>
 
 
 

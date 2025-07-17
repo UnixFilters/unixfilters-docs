@@ -12,6 +12,8 @@ Cette documentation explique comment créer une tâche pour le projet **UnixFilt
 Dans **unixfilters** :
 Les blocs sont configurés dans le fichier [`public/task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js). Il contient les blocs que l’utilisateur pourra manipuler dans l’interface.
 
+La liste des blocs existants est [ici](./list_blocks.md).
+
 **Exemple :**
 
 ```javascript title="task.js"
