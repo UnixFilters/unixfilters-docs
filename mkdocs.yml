@@ -47,7 +47,10 @@ nav:
       - Documentation JavaScript: jsdoc/index.html
       - Guide:
           - Mise en place d'une tâche: help/init_task.md
-          - Ajouter un bloc: help/add_block.md
+          - Ajouter un bloc COMMANDE: help/add_command_block.md
+          - Ajouter un bloc OPTION: help/add_option_block.md
+          - Ajouter un bloc SYMBOLE: help/add_symbol_block.md
+          - Ajouter un nouveau bloc: help/add_new_block.md
           - Créer une catégorie: help/create_category.md
   - Librairie Python:
       - Documentation Checker: documentation_checker.md

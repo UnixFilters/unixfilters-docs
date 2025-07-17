@@ -5,7 +5,7 @@ Actuellement, il existe 4 types de catégorie :
 - Catégorie **Redirections** : Contient les différents symboles de redirection (<, >, >>)
 - Catégorie **Entrée** : Contient un bloc d'entrée de texte
 - Catégorie **Noop** : Contient les blocs no-operation, qui sont utilisés pour complèter chaque bloc lors du lancement de la commande
-- Catégorie de **commande** : Il en existe autant qu'il existe de commande. Chaque catégorie contient la commande du même nom, ainsi que les options avec laquelle elle est compatible
+- Catégorie de **commande** : Il en existe autant qu'il existe de commande. Chaque catégorie contient la commande du même nom, ainsi que les options compatibles
 
 Les catégories sont attribuées dès la création d'un bloc. Lorsque vous ajoutez une option, une commande, un noop, ou un symbole, sa catégorie est attribuée automatiquement lors de sa création.
 
