@@ -897,7 +897,7 @@
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>└──<span class="w"> </span>unixfilters.js
 </span></code></pre></div>
 <h2 id="details-du-fonctionnement">Détails du fonctionnement</h2>
-<p>Le serveur <code>server.py</code> dans le projet unixfilters-franceIOI reçoit le code depuis l'interface frontend.
+<p>Dans le projet unixfilters-franceIOI, le serveur <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/python_lib/server.py"><code>python_lib/server.py</code></a> reçoit le code depuis l'interface frontend.
 Il va ensuite :</p>
 <h3 id="a-sauvegarder-le-code-dans-solutionpy">a. Sauvegarder le code dans `solution.py``</h3>
 <p><strong>Exemple :</strong>
@@ -909,7 +909,7 @@ Les blocs ont généré la commande :</p>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">head</span><span class="p">([</span><span class="s2">&quot;-n&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">])</span>
 </span></code></pre></div>
 <p>En cliquant sur <code>Exécuter</code> côté front, le code est envoyé au serveur.</p>
-<p>Le serveur écrit dans le fichier solution.py :</p>
+<p>Le serveur écrit dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/solution.py"><code>exemple_checker/tests/gen/solution.py</code></a> :</p>
 <div class="language-python highlight"><span class="filename">solution.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">cut</span><span class="p">([</span><span class="s2">&quot;-d&quot;</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="s2">&quot;-f&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="s2">&quot;livres.txt&quot;</span><span class="p">])</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">sort</span><span class="p">([</span><span class="s2">&quot;-r&quot;</span><span class="p">])</span>
@@ -917,7 +917,7 @@ Les blocs ont généré la commande :</p>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">head</span><span class="p">([</span><span class="s2">&quot;-n&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">])</span>
 </span></code></pre></div>
 <h3 id="b-execution-via-commandspy">b. Exécution via commands.py</h3>
-<p>Le serveur appelle commands.py, qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans <code>test01.solout</code>.</p>
+<p>Le serveur appelle <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py"><code>exemple_checker/tests/gen/commands.py</code></a>, qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.solout"><code>exemple_checker/tests/files/test01.solout</code></a>.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-python highlight"><span class="filename">commands.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">try</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="c1"># Exécution de la librairie avec le code généré dans solution.py</span>
@@ -958,7 +958,7 @@ Les blocs ont généré la commande :</p>
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>}
 </span></code></pre></div>
 <h3 id="c-verification-avec-checkerpy">c. Vérification avec <code>checker.py</code></h3>
-<p>Le serveur appelle ensuite le checker.py avec trois arguments :</p>
+<p>Le serveur appelle ensuite le <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py"><code>exemple_checker/tests/gen/checker.py</code></a> avec trois arguments :</p>
 <ul>
 <li>Le fichier test01.solout</li>
 <li>Le fichier test01.in (fichier d'entrée toujours vide)</li>
