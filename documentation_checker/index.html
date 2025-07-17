@@ -615,29 +615,29 @@
           <li class="md-nav__item">
   <a href="#a-sauvegarder-le-code-dans-solutionpy" class="md-nav__link">
     <span class="md-ellipsis">
-      a. Sauvegarder le code dans `solution.py``
+      a. Sauvegarder le code dans solution.py
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-execution-via-commandspy" class="md-nav__link">
+  <a href="#b-execution-pas-a-pas-via-commandspy" class="md-nav__link">
     <span class="md-ellipsis">
-      b. Exécution via commands.py
+      b. Exécution pas-à-pas via commands.py
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-verification-avec-checkerpy" class="md-nav__link">
+  <a href="#c-comparaison-avec-checkerpy" class="md-nav__link">
     <span class="md-ellipsis">
-      c. Vérification avec checker.py
+      c. Comparaison avec checker.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="c. Vérification avec checker.py">
+    <nav class="md-nav" aria-label="c. Comparaison avec checker.py">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -801,29 +801,29 @@
           <li class="md-nav__item">
   <a href="#a-sauvegarder-le-code-dans-solutionpy" class="md-nav__link">
     <span class="md-ellipsis">
-      a. Sauvegarder le code dans `solution.py``
+      a. Sauvegarder le code dans solution.py
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#b-execution-via-commandspy" class="md-nav__link">
+  <a href="#b-execution-pas-a-pas-via-commandspy" class="md-nav__link">
     <span class="md-ellipsis">
-      b. Exécution via commands.py
+      b. Exécution pas-à-pas via commands.py
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-verification-avec-checkerpy" class="md-nav__link">
+  <a href="#c-comparaison-avec-checkerpy" class="md-nav__link">
     <span class="md-ellipsis">
-      c. Vérification avec checker.py
+      c. Comparaison avec checker.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="c. Vérification avec checker.py">
+    <nav class="md-nav" aria-label="c. Comparaison avec checker.py">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -866,9 +866,9 @@
 <h2 id="deroulement">Déroulement</h2>
 <p>Le serveur utilise le checker pour exécuter trois étapes principales :</p>
 <ul>
-<li>Sauvegarder le code envoyé par le front</li>
-<li>Exécuter la solution avec la librairie commands.py et mettre le résultat dans test01.solout</li>
-<li>Exécuter test01.solout avec le résultat attendu et envoyer au front l'objet de réponse (message + score + steps)</li>
+<li>Mettre dans un fichier <code>solution.py</code> le code envoyé par le front</li>
+<li>Exécuter pas-à-pas le code avec la librairie <code>commands.py</code> et mettre les étapes dans le fichier <code>test01.solout</code></li>
+<li>Comparer le code de la dernière étape <code>test01.solout</code> avec le résultat attendu, puis envoyer au front l'objet de réponse (message + score + steps)</li>
 </ul>
 <p><a class="glightbox" href="../img/schema_logique_checker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="schema" src="../img/schema_logique_checker.png" /></a></p>
 <h2 id="arborescence">Arborescence</h2>
@@ -899,7 +899,7 @@
 <h2 id="details-du-fonctionnement">Détails du fonctionnement</h2>
 <p>Dans le projet unixfilters-franceIOI, le serveur <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/python_lib/server.py"><code>python_lib/server.py</code></a> reçoit le code depuis l'interface frontend.
 Il va ensuite :</p>
-<h3 id="a-sauvegarder-le-code-dans-solutionpy">a. Sauvegarder le code dans `solution.py``</h3>
+<h3 id="a-sauvegarder-le-code-dans-solutionpy">a. Sauvegarder le code dans <code>solution.py</code></h3>
 <p><strong>Exemple :</strong>
 Les blocs ont généré la commande :</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">cut</span><span class="p">([</span><span class="s2">&quot;-d&quot;</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="s2">&quot;-f&quot;</span><span class="p">,</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="s2">&quot;livres.txt&quot;</span><span class="p">])</span>
@@ -916,7 +916,7 @@ Les blocs ont généré la commande :</p>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">head</span><span class="p">([</span><span class="s2">&quot;-n&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">])</span>
 </span></code></pre></div>
-<h3 id="b-execution-via-commandspy">b. Exécution via commands.py</h3>
+<h3 id="b-execution-pas-a-pas-via-commandspy">b. Exécution pas-à-pas via commands.py</h3>
 <p>Le serveur appelle <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py"><code>exemple_checker/tests/gen/commands.py</code></a>, qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.solout"><code>exemple_checker/tests/files/test01.solout</code></a>.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-python highlight"><span class="filename">commands.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">try</span><span class="p">:</span>
@@ -957,7 +957,7 @@ Les blocs ont généré la commande :</p>
 </span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    ]
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>}
 </span></code></pre></div>
-<h3 id="c-verification-avec-checkerpy">c. Vérification avec <code>checker.py</code></h3>
+<h3 id="c-comparaison-avec-checkerpy">c. Comparaison avec <code>checker.py</code></h3>
 <p>Le serveur appelle ensuite le <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py"><code>exemple_checker/tests/gen/checker.py</code></a> avec trois arguments :</p>
 <ul>
 <li>Le fichier test01.solout</li>
