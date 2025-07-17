@@ -824,7 +824,7 @@
 <h1 id="ajouter-un-bloc-command">Ajouter un bloc COMMAND</h1>
 <h2 id="1-generer-le-bloc">1. Générer le bloc</h2>
 <ul>
-<li>Dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, ajouter la commande à la liste <code>COMMANDS</code> dans sa catégorie :</li>
+<li>Dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js"><code>public/blocklyUnixFilters_lib.js</code></a>, ajouter la commande à la liste <code>COMMANDS</code> dans sa catégorie :</li>
 </ul>
 <p><strong>Exemple :</strong> Pour ajouter une commande nommée <code>exemple</code>, il faut ajouter son nom, tooltip et format à la liste.</p>
 <div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">COMMANDS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -842,7 +842,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">];</span>
 </span></code></pre></div>
 <ul>
-<li>Dans le fichier <code>unixfilters</code>, ajouter la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a> <strong>même si elle ne possède pas d'options</strong>.</li>
+<li>Dans le fichier <code>public/unixfilters</code>, ajouter la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a> <strong>même si elle ne possède pas d'options</strong>.</li>
 </ul>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">unixfilters.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">optionTooltips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -851,9 +851,9 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Autres commandes</span>
 </span></code></pre></div>
 <p>(Pour ajouter des options, voir la <a href="../add_option_block/">page dédiée</a>.)</p>
-<p>Le bloc sera ensuite créé grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423">makeCommandBlock</a>.</p>
+<p>Le bloc sera ensuite créé grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423"><code>makeCommandBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>
-<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>task.js</code></a>, ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils quand elle n'est pas triée. Le bloc sera nommé ainsi : <code>nomdelacommande</code></p>
+<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>public/task.js</code></a>, ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils quand elle n'est pas triée. Le bloc sera nommé ainsi : <code>nomdelacommande</code></p>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nx">includeBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -866,7 +866,7 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">...</span>
 </span></code></pre></div>
 <h2 id="3-ajouter-le-label-du-bloc-et-sa-categorie">3. Ajouter le label du bloc et sa catégorie</h2>
-<p>Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface. De plus, comme chaque commande génère sa propre catégorie à son nom, il faut aussi ajouter la commande dans <code>categories</code></p>
+<p>Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface. De plus, comme chaque commande génère sa propre catégorie à son nom, il faut aussi ajouter la commande dans <code>categories</code>.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">getContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">display</span><span class="p">,</span><span class="w"> </span><span class="nx">infos</span><span class="p">,</span><span class="w"> </span><span class="nx">curLevel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">localLanguageStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -884,7 +884,7 @@
 <p>Le label sur le bloc sera <code>Exemple</code>, et en catégorie, sa catégorie sera <code>Nom de la catégorie</code>.
 <a class="glightbox" href="../../img/create_command_block_example1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="command block" src="../../img/create_command_block_example1.png" /></a></p>
 <h2 id="4-ajouter-a-jsongeneratorjs">4. Ajouter à <code>jsongenerator.js</code></h2>
-<p>Dans le fichier <code>jsongenerator.js</code>, il faut ajouter la génération de code pour la commande. Pour une commande, la génération de code se fait avec la fonction <code>makeCommandGenerator</code>, qui va mettre le nom de la commande telle quelle dans le code généré.</p>
+<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/jsongenerator.js"><code>public/jsongenerator.js</code></a>, il faut ajouter la génération de code pour la commande. Pour une commande, la génération de code se fait avec la fonction <code>makeCommandGenerator</code>, qui va mettre le nom de la commande telle quelle dans le code généré.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">jsongenerator.js</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Generates code for commands</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">// Autres générations</span>

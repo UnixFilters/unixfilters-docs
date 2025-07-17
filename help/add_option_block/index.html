@@ -811,7 +811,7 @@
 </table>
 <h2 id="1-generer-le-bloc">1. Générer le bloc</h2>
 <p>Pour que la librairie puisse générer ce bloc, il faut :</p>
-<p>Dans le fichier <code>unixfilters.js</code>, ajouter l’option sous la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a>.</p>
+<p>Dans le fichier <code>public/unixfilters.js</code>, ajouter l’option sous la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a>.</p>
 <p><strong>Exemple :</strong> Pour ajouter l'option <em>inventée</em> -x[FIELD_INDEX], il faut ajouter sa lettre (x), son type (field index) et son tooltip (indication qui sera affichée lorsqu'on passe la souris sur le bloc) avec la commande correspondante, on prend l'exemple de tail ici.</p>
 <div class="language-javascript highlight"><span class="filename">unixfilters.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">optionTooltips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// Autres commandes</span>
@@ -826,7 +826,7 @@
 </span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L343"><code>makeOptionBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>
-<p>Pour que le bloc soit affiché dans la tâche, il faut dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>task.js</code></a>, ajouter le nom du bloc.</p>
+<p>Pour que le bloc soit affiché dans la tâche, il faut dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>public/task.js</code></a>, ajouter le nom du bloc.</p>
 <p>Le bloc sera nommé ainsi : <code>option_&lt;lettre&gt;_&lt;type&gt;</code>où le type peut être flag/field_index.</p>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

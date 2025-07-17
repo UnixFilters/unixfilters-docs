@@ -769,7 +769,7 @@
 
 <h1 id="ajouter-un-bloc-symbol">Ajouter un bloc SYMBOL</h1>
 <h2 id="1-generer-le-bloc">1. Générer le bloc</h2>
-<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js">blocklyUnixFilters_lib.js</a>, ajouter le bloc dans sa catégorie correspondante.</p>
+<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js"><code>public/blocklyUnixFilters_lib.js</code></a>, ajouter le bloc dans sa catégorie correspondante.</p>
 <p><strong>Exemple :</strong> Pour ajouter le symbole exemple, il faut ajouter son nom, sa couleur et son tooltip.</p>
 <div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SYMBOL_NAMES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span>
@@ -782,7 +782,7 @@
 </span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L479"><code>makeSymbolBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>
-<p>Dans le fichier [task.js], ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>symbol_nomdusymbole</strong></p>
+<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>public/task.js</code></a>, ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>symbol_nomdusymbole</strong></p>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">task.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initTask</span><span class="p">(</span><span class="nx">subTask</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nx">includeBlocks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
