@@ -42,7 +42,7 @@ Le serveur utilise le checker pour exécuter deux étapes principales :
 
 ## Détails du fonctionnement
 
-Le serveur `server.py` dans le projet unixfilters-franceIOI reçoit le code depuis l'interface frontend.
+Dans le projet unixfilters-franceIOI, le serveur [`python_lib/server.py`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/python_lib/server.py) reçoit le code depuis l'interface frontend.
 Il va ensuite :
 
 ### a. Sauvegarder le code dans `solution.py``
@@ -60,7 +60,7 @@ head(["-n","5"])
 
 En cliquant sur `Exécuter` côté front, le code est envoyé au serveur.
 
-Le serveur écrit dans le fichier solution.py :
+Le serveur écrit dans le fichier [`exemple_checker/tests/gen/solution.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/solution.py) :
 
 ```python title="solution.py"
 cut(["-d","-","-f","3","livres.txt"])
@@ -72,7 +72,7 @@ head(["-n","5"])
 
 ### b. Exécution via commands.py
 
-Le serveur appelle commands.py, qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans `test01.solout`.
+Le serveur appelle [`exemple_checker/tests/gen/commands.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py), qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans [`exemple_checker/tests/files/test01.solout`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.solout).
 
 **Exemple :**
 
@@ -120,13 +120,13 @@ print(json.dumps(get_output(), indent=4))
 
 ### c. Vérification avec `checker.py`
 
-Le serveur appelle ensuite le checker.py avec trois arguments :
+Le serveur appelle ensuite le [`exemple_checker/tests/gen/checker.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py) avec trois arguments :
 
 - Le fichier test01.solout
 - Le fichier test01.in (fichier d'entrée toujours vide)
 - Le fichier test01.out (qui contient la réponse attendue)
 
-Le checker compare la réponse générée (` test01.solout`) et la réponse attendue (`test01.out`), en supprimant les espaces et retour à la ligne.
+Le checker compare la réponse générée (`test01.solout`) et la réponse attendue (`test01.out`), en supprimant les espaces et retour à la ligne.
 
 #### Évaluation
 
