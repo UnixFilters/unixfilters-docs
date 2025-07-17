@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../doc_js/">
+        <link rel="next" href="../jsdoc/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting started - UnixFilters</title>
+        <title>Test - UnixFilters</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#documentation-du-fichier-blocklyunixfilters_libjs" class="md-skip">
           Aller au contenu
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting started
+              Test
             
           </span>
         </div>
@@ -218,6 +218,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -235,7 +257,7 @@
   
   
   <span class="md-ellipsis">
-    Getting started
+    Test
     
   </span>
   
@@ -248,7 +270,7 @@
   
   
   <span class="md-ellipsis">
-    Getting started
+    Test
     
   </span>
   
@@ -271,37 +293,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
+  <a href="#description-generale" class="md-nav__link">
     <span class="md-ellipsis">
-      Prérequis
+      Description générale
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-developpement" class="md-nav__link">
+  <a href="#sommaire" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode développement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Mode développement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unixfilters-franceioi" class="md-nav__link">
-    <span class="md-ellipsis">
-      unixfilters-franceIOI
+      Sommaire
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-principale-getcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction principale : getContext
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction principale : getContext">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#checker" class="md-nav__link">
+  <a href="#responsabilites" class="md-nav__link">
     <span class="md-ellipsis">
-      checker
+      Responsabilités :
     </span>
   </a>
   
@@ -313,18 +335,147 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-production" class="md-nav__link">
+  <a href="#langues-supportees" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode production
+      Langues supportées
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suite-de-la-documentation" class="md-nav__link">
+  <a href="#blocs-de-commandes-unix" class="md-nav__link">
     <span class="md-ellipsis">
-      Suite de la documentation
+      Blocs de commandes Unix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocs-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocs spéciaux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocs spéciaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redirections-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirections (symbols)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noop-placeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noop (placeholders)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-dynamique-de-blocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création dynamique de blocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Création dynamique de blocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makecommandblockcommandarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeCommandBlock(commandArray)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makegrepblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeGrepBlock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makeoptionblockflag-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeOptionBlock(flag, type)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makesymbolblocksymbolarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeSymbolBlock(symbolArray)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makenoopblocknooparray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeNoopBlock(noopArray)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitaires-et-comportement-du-contexte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilitaires et comportement du contexte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrement-de-la-librairie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrement de la librairie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annexe-types-de-blocs-supportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annexe : Types de blocs supportés
     </span>
   </a>
   
@@ -334,28 +485,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../doc_js/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Test
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -776,37 +905,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequis" class="md-nav__link">
+  <a href="#description-generale" class="md-nav__link">
     <span class="md-ellipsis">
-      Prérequis
+      Description générale
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-developpement" class="md-nav__link">
+  <a href="#sommaire" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode développement
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Mode développement">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unixfilters-franceioi" class="md-nav__link">
-    <span class="md-ellipsis">
-      unixfilters-franceIOI
+      Sommaire
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#fonction-principale-getcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction principale : getContext
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonction principale : getContext">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#checker" class="md-nav__link">
+  <a href="#responsabilites" class="md-nav__link">
     <span class="md-ellipsis">
-      checker
+      Responsabilités :
     </span>
   </a>
   
@@ -818,18 +947,147 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mode-production" class="md-nav__link">
+  <a href="#langues-supportees" class="md-nav__link">
     <span class="md-ellipsis">
-      Mode production
+      Langues supportées
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suite-de-la-documentation" class="md-nav__link">
+  <a href="#blocs-de-commandes-unix" class="md-nav__link">
     <span class="md-ellipsis">
-      Suite de la documentation
+      Blocs de commandes Unix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocs-speciaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blocs spéciaux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blocs spéciaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redirections-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirections (symbols)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noop-placeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noop (placeholders)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-dynamique-de-blocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Création dynamique de blocs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Création dynamique de blocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#makecommandblockcommandarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeCommandBlock(commandArray)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makegrepblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeGrepBlock()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makeoptionblockflag-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeOptionBlock(flag, type)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makesymbolblocksymbolarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeSymbolBlock(symbolArray)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makenoopblocknooparray" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeNoopBlock(noopArray)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitaires-et-comportement-du-contexte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilitaires et comportement du contexte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enregistrement-de-la-librairie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrement de la librairie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annexe-types-de-blocs-supportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annexe : Types de blocs supportés
     </span>
   </a>
   
@@ -851,89 +1109,219 @@
 
 
 
-<h1 id="getting-started">Getting started</h1>
-<h2 id="prerequis">Prérequis</h2>
+<h1 id="documentation-du-fichier-blocklyunixfilters_libjs">Documentation du fichier <code>blocklyUnixFilters_lib.js</code></h1>
+<h2 id="description-generale">Description générale</h2>
+<p>Ce fichier définit les <strong>blocs Blockly</strong> pour simuler des <strong>commandes Unix</strong> (filtres) dans un environnement visuel, utilisé notamment avec <code>quickAlgo</code>. Il gère la configuration du contexte Blockly, les traductions locales, les blocs de commandes, les redirections et les options disponibles dans un style visuel éducatif.</p>
+<hr />
+<h2 id="sommaire">Sommaire</h2>
 <ul>
-<li>Python 3.8+</li>
-<li>Node.js</li>
-<li>npm</li>
-<li>Git</li>
-<li>pip</li>
+<li><a href="#fonction-principale--getcontext">Fonction principale : <code>getContext</code></a></li>
+<li><a href="#langues-supportées">Langues supportées</a></li>
+<li><a href="#blocs-de-commandes-unix">Blocs de commandes Unix</a></li>
+<li>
+<p><a href="#blocs-spéciaux">Blocs spéciaux</a></p>
+</li>
+<li>
+<p><a href="#redirections-symbols">Redirections (symbols)</a></p>
+</li>
+<li><a href="#noop-placeholders">Noop (placeholders)</a></li>
+<li>
+<p><a href="#entrées">Entrées</a></p>
+</li>
+<li>
+<p><a href="#création-dynamique-de-blocs">Création dynamique de blocs</a></p>
+</li>
+<li>
+<p><a href="#makecommandblock"><code>makeCommandBlock</code></a></p>
+</li>
+<li><a href="#makegrepblock"><code>makeGrepBlock</code></a></li>
+<li><a href="#makeoptionblock"><code>makeOptionBlock</code></a></li>
+<li><a href="#makesymbolblock"><code>makeSymbolBlock</code></a></li>
+<li>
+<p><a href="#makenoopblock"><code>makeNoopBlock</code></a></p>
+</li>
+<li>
+<p><a href="#utilitaires-et-comportement-du-contexte">Utilitaires et comportement du contexte</a></p>
+</li>
+<li><a href="#enregistrement-de-la-librairie">Enregistrement de la librairie</a></li>
 </ul>
-<h2 id="mode-developpement">Mode développement</h2>
-<h3 id="unixfilters-franceioi">unixfilters-franceIOI</h3>
-<p>Cloner le repo unixfilters-franceIOI</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/waningcrescendo/unixfilters-franceIOI.git
-</span></code></pre></div>
-<p>Ajouter le repo bebras-modules dans le dossier public</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>unixfilters-franceIOI/public
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/France-ioi/bebras-modules.git
-</span></code></pre></div>
-<p>Mettre en place l'environnement virtuel pour le serveur Python</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>../python_lib
-</span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</span></code></pre></div>
+<hr />
+<h2 id="fonction-principale-getcontext">Fonction principale : <code>getContext</code></h2>
+<p>Cette fonction initialise le <strong>contexte Blockly</strong> pour les filtres Unix.</p>
+<h3 id="responsabilites">Responsabilités :</h3>
 <ul>
-<li>Sur <strong>Linux/macOS</strong> :</li>
+<li>Définir les blocs disponibles (cat, grep, sort, etc.)</li>
+<li>Gérer les traductions (actuellement uniquement le français)</li>
+<li>Gérer les événements d’affichage et le redimensionnement</li>
+<li>Nettoyer les blocs inutiles (<code>noop</code>) lors du survol de la souris</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span></code></pre></div>
+<hr />
+<h2 id="langues-supportees">Langues supportées</h2>
+<p>Actuellement, seul le <strong>français</strong> est configuré via <code>localLanguageStrings</code>. Les éléments traduits incluent :</p>
 <ul>
-<li>Sur <strong>Windows</strong> :</li>
+<li>Les catégories (e.g. <code>cat</code>, <code>sort</code>)</li>
+<li>Les étiquettes de blocs</li>
+<li>Les messages de validation ou d’erreurs</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</span></code></pre></div>
-<p>Installer flask et lancer le serveur python dans un environnement virtuel</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>install<span class="w"> </span>flask-cors
-</span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>server.py
-</span></code></pre></div>
-<p>Dans un autre terminal, installer Node.js</p>
+<hr />
+<h2 id="blocs-de-commandes-unix">Blocs de commandes Unix</h2>
+<p>Définis dans la constante <code>COMMANDS</code>, chaque bloc correspond à une commande Unix courante :</p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat</code></td>
+<td>Concatène et affiche le contenu d'un fichier</td>
+<td><code>cat [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>Trie les lignes d'un fichier</td>
+<td><code>sort [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>head</code></td>
+<td>Affiche les premières lignes d'un fichier</td>
+<td><code>head [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td>Extrait des colonnes spécifiques</td>
+<td><code>cut [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>tail</code></td>
+<td>Affiche les dernières lignes d'un fichier</td>
+<td><code>tail [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>tee</code></td>
+<td>Duplique la sortie vers un fichier et la console</td>
+<td><code>tee [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>tr</code></td>
+<td>Remplace ou supprime des caractères</td>
+<td><code>tr [options]</code></td>
+</tr>
+<tr>
+<td><code>uniq</code></td>
+<td>Supprime les lignes dupliquées adjacentes</td>
+<td><code>uniq [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>wc</code></td>
+<td>Compte lignes, mots et caractères</td>
+<td><code>wc [options] fichier</code></td>
+</tr>
+<tr>
+<td><code>sed</code></td>
+<td>Éditeur de flux pour transformer du texte</td>
+<td><code>sed [options] script fichier</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="blocs-speciaux">Blocs spéciaux</h2>
+<h3 id="redirections-symbols">Redirections (symbols)</h3>
+<p>Définis dans la constante <code>SYMBOL_NAMES</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Symbole</th>
+<th>Couleur</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code> (<code>symbol_greater_than</code>)</td>
+<td>25</td>
+<td>Redirige la sortie vers un fichier</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code> (<code>symbol_even_greater_than</code>)</td>
+<td>90</td>
+<td>Ajoute la sortie à la fin d’un fichier existant</td>
+</tr>
+<tr>
+<td><code>&lt;</code> (<code>symbol_less_than</code>)</td>
+<td>50</td>
+<td>Lit les entrées depuis un fichier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="noop-placeholders">Noop (placeholders)</h3>
+<p>Définis dans <code>NOOP_NAMES</code>, utilisés comme blocs temporaires/inactifs :</p>
 <ul>
-<li>Sur <strong>Linux</strong> (Debian/Ubuntu) :</li>
+<li><code>noop_option_flag</code></li>
+<li><code>noop_option_field_index</code></li>
+<li><code>noop_command</code></li>
+<li><code>noop_text</code></li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm
-</span></code></pre></div>
+<h3 id="entrees">Entrées</h3>
+<p>Un bloc de type texte (<code>text_input</code>) est défini pour injecter du texte brut ou un motif (regex, plage de caractères, etc.).</p>
+<hr />
+<h2 id="creation-dynamique-de-blocs">Création dynamique de blocs</h2>
+<h3 id="makecommandblockcommandarray"><code>makeCommandBlock(commandArray)</code></h3>
+<p>Crée dynamiquement les blocs pour chaque commande listée dans <code>COMMANDS</code>. Génère les blocs avec :</p>
 <ul>
-<li>Sur <strong>macOS</strong> :</li>
+<li><code>args0</code>: zone d’entrée</li>
+<li><code>tooltip</code> : info-bulle avec usage</li>
+<li>Générateur de code pour Python et JavaScript</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
-</span></code></pre></div>
+<hr />
+<h3 id="makegrepblock"><code>makeGrepBlock()</code></h3>
+<p>Blocs personnalisés pour la commande <code>grep</code> :</p>
 <ul>
-<li>Sur <strong>Windows</strong> :</li>
+<li>Contient un champ texte (<code>pattern</code>) et une entrée (<code>fichier</code>)</li>
+<li>Génère du code <code>grep(["pattern", ...args])</code></li>
 </ul>
-<p>Télécharger et installer Node.js depuis <a href="https://nodejs.org/">le site officiel</a>.</p>
-<p>Vérifier l'installation :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>npm<span class="w"> </span>-v
-</span></code></pre></div>
-<p>Installer les dépendances</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span>install
-</span></code></pre></div>
-<p>À la racine du projet, lancer le serveur node</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>node<span class="w"> </span>server.js
-</span></code></pre></div>
-<p>URL en développement : http://localhost:3000</p>
-<h3 id="checker">checker</h3>
-<p>En dehors du dossier unixfilters, cloner le repo</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>..
-</span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/UnixFilters/checker.git
-</span></code></pre></div>
-<p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/python_lib/server.py#L8">server.py</a>, changer le chemin</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">PATH_BASE</span> <span class="o">=</span> <span class="s2">&quot;CHEMIN&quot;</span> <span class="c1"># Remplacer par le chemin vers le dossier tests du checker</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">PATH_GEN</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH_BASE</span><span class="p">,</span> <span class="s2">&quot;gen&quot;</span><span class="p">)</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">PATH_FILES</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH_BASE</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<h2 id="mode-production">Mode production</h2>
-<p>Ajouter les fichiers modifiés sur le SVN</p>
-<h2 id="suite-de-la-documentation">Suite de la documentation</h2>
+<hr />
+<h3 id="makeoptionblockflag-type"><code>makeOptionBlock(flag, type)</code></h3>
+<p>Crée les blocs d’options pour les commandes, selon le type :</p>
 <ul>
-<li><a href="https://unixfilters.github.io/unixfilters-docs/">Documentation fonctions</a></li>
-<li><a href="https://github.com/UnixFilters/checker/blob/main/docs/documentation_checker.md">Documentation checker</a></li>
-<li><a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/docs/init_task.md">Mise en place d'une tâche</a></li>
+<li><code>flag</code> → Option booléenne simple (<code>-n</code>, <code>-v</code>, etc.)</li>
+<li><code>field_index</code> → Option avec argument (<code>-f 2</code>)</li>
+</ul>
+<p>Les options sont associées aux commandes compatibles.</p>
+<hr />
+<h3 id="makesymbolblocksymbolarray"><code>makeSymbolBlock(symbolArray)</code></h3>
+<p>Crée les blocs de redirection (<code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code>) avec une couleur et une info-bulle.</p>
+<hr />
+<h3 id="makenoopblocknooparray"><code>makeNoopBlock(noopArray)</code></h3>
+<p>Crée des blocs "vides" (no-op) utilisés comme espace réservé ou suppression automatique par le système.</p>
+<hr />
+<h2 id="utilitaires-et-comportement-du-contexte">Utilitaires et comportement du contexte</h2>
+<ul>
+<li><code>context.reset(taskInfos)</code> : réinitialise l’état de la simulation</li>
+<li><code>context.resetDisplay()</code> : réinitialise l’affichage</li>
+<li><code>context.updateScale()</code> : met à jour l’échelle (zoom) visuel</li>
+<li><code>context.unload()</code> : nettoyage lors du changement de contexte</li>
+<li><code>context.onChange()</code> : détection de changements dans l’interface Blockly</li>
+<li><code>context.provideBlocklyColours()</code> : fournit les couleurs des catégories</li>
+</ul>
+<hr />
+<h2 id="enregistrement-de-la-librairie">Enregistrement de la librairie</h2>
+<p>À la fin du fichier :</p>
+<ul>
+<li>Si <code>quickAlgoLibraries</code> est défini → enregistre la librairie via <code>quickAlgoLibraries.register("unixfilters", getContext)</code></li>
+<li>Sinon → ajoute à <code>window.quickAlgoLibrariesList</code> pour enregistrement ultérieur</li>
+</ul>
+<hr />
+<h2 id="annexe-types-de-blocs-supportes">Annexe : Types de blocs supportés</h2>
+<ul>
+<li>Blocs de <strong>commandes Unix</strong></li>
+<li>Blocs <strong>symboliques</strong> (redirection)</li>
+<li>Blocs <strong>d’options</strong> (<code>-n</code>, <code>-f</code>, etc.)</li>
+<li>Blocs <strong>noop</strong> (temporaires ou inactifs)</li>
+<li>Bloc <strong>texte d’entrée</strong></li>
 </ul>
 
 
