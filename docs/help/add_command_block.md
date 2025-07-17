@@ -2,7 +2,7 @@
 
 ## 1. Générer le bloc
 
-- Dans [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter la commande à la liste `COMMANDS` dans sa catégorie :
+- Dans [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter la commande à la liste `COMMANDS` dans sa catégorie :
 
 **Exemple :** Pour ajouter une commande nommée `exemple`, il faut ajouter son nom, tooltip et format à la liste.
 
@@ -22,7 +22,7 @@ const COMMANDS = [
 ];
 ```
 
-- Dans le fichier `unixfilters`, ajouter la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375) **même si elle ne possède pas d'options**.
+- Dans le fichier `public/unixfilters`, ajouter la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375) **même si elle ne possède pas d'options**.
 
 **Exemple :**
 
@@ -35,11 +35,11 @@ const optionTooltips = {
 
 (Pour ajouter des options, voir la [page dédiée](./add_option_block.md).)
 
-Le bloc sera ensuite créé grâce à la fonction [makeCommandBlock](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423).
+Le bloc sera ensuite créé grâce à la fonction [`makeCommandBlock`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423).
 
 ## 2. Ajouter le bloc à la tâche
 
-Dans le fichier [`task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js), ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils quand elle n'est pas triée. Le bloc sera nommé ainsi : `nomdelacommande`
+Dans le fichier [`public/task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js), ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils quand elle n'est pas triée. Le bloc sera nommé ainsi : `nomdelacommande`
 
 **Exemple :**
 
@@ -57,7 +57,7 @@ function initTask(subTask) {
 
 ## 3. Ajouter le label du bloc et sa catégorie
 
-Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface. De plus, comme chaque commande génère sa propre catégorie à son nom, il faut aussi ajouter la commande dans `categories`
+Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface. De plus, comme chaque commande génère sa propre catégorie à son nom, il faut aussi ajouter la commande dans `categories`.
 
 **Exemple :**
 
@@ -81,7 +81,7 @@ Le label sur le bloc sera `Exemple`, et en catégorie, sa catégorie sera `Nom d
 
 ## 4. Ajouter à `jsongenerator.js`
 
-Dans le fichier `jsongenerator.js`, il faut ajouter la génération de code pour la commande. Pour une commande, la génération de code se fait avec la fonction `makeCommandGenerator`, qui va mettre le nom de la commande telle quelle dans le code généré.
+Dans le fichier [`public/jsongenerator.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/jsongenerator.js), il faut ajouter la génération de code pour la commande. Pour une commande, la génération de code se fait avec la fonction `makeCommandGenerator`, qui va mettre le nom de la commande telle quelle dans le code généré.
 
 **Exemple :**
 

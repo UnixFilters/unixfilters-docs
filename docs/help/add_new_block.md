@@ -41,9 +41,9 @@ Récupérer la définition du bloc avec un copier-coller.
 
 ## 2. Ajouter dans la librairie
 
-Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), la création du bloc peut se faire :
+Dans le fichier [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), la création du bloc peut se faire :
 
-- Avec une définition classique (voir le bloc [text_input](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L491))
+- Avec une définition classique (voir le bloc [`text_input`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L491))
 
 ```javascript title="blocklyUnixFilters_lib.js"
 context.customBlocks = {
@@ -88,6 +88,6 @@ context.customBlocks = {
 
 Le bloc block_test sera ajouté dans la catégorie "inputs" si la boîte à outils est triée par catégorie.
 
-- Avec une fonction (voir la fonction [makeGrepBlock()](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L260)). Cela permet d'ajouter une logique plus complexe.
+- Avec une fonction (voir la fonction [`makeGrepBlock()`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L260)). Cela permet d'ajouter une logique plus complexe.
 
-Pour l'ajouter dans une nouvelle catégorie, il faut en créer une. Voir : [Ajouter une catégorie]()
+Pour l'ajouter dans une nouvelle catégorie, il faut en créer une. Voir : [Ajouter une catégorie](./create_category.md)

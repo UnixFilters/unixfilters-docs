@@ -9,7 +9,7 @@ Actuellement, il existe 4 types de catégorie :
 
 Les catégories sont attribuées dès la création d'un bloc. Lorsque vous ajoutez une option, une commande, un noop, ou un symbole, sa catégorie est attribuée automatiquement lors de sa création.
 
-Pour créer une nouvelle catégorie, dans le fichier `blocklyUnixFilters_lib.js`, il faut :
+Pour créer une nouvelle catégorie, dans le fichier [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), il faut :
 
 ## Ajouter la catégorie dans le contexte
 

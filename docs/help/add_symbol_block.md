@@ -2,7 +2,7 @@
 
 ## 1. Générer le bloc
 
-Dans le fichier [blocklyUnixFilters_lib.js](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter le bloc dans sa catégorie correspondante.
+Dans le fichier [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter le bloc dans sa catégorie correspondante.
 
 **Exemple :** Pour ajouter le symbole exemple, il faut ajouter son nom, sa couleur et son tooltip.
 
@@ -21,7 +21,7 @@ Le bloc sera créé automatiquement grâce à la fonction [`makeSymbolBlock`](ht
 
 ## 2. Ajouter le bloc à la tâche
 
-Dans le fichier [task.js], ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage **symbol_nomdusymbole**
+Dans le fichier [`public/task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js), ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage **symbol_nomdusymbole**
 
 **Exemple :**
 
