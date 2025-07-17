@@ -842,7 +842,7 @@
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">];</span>
 </span></code></pre></div>
 <ul>
-<li>Dans le fichier <code>public/unixfilters</code>, ajouter la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a> <strong>même si elle ne possède pas d'options</strong>.</li>
+<li>Dans le fichier <code>public/unixfilters.js</code>, ajouter la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a> <strong>même si elle ne possède pas d'options</strong>.</li>
 </ul>
 <p><strong>Exemple :</strong></p>
 <div class="language-javascript highlight"><span class="filename">unixfilters.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">optionTooltips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -851,7 +851,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// Autres commandes</span>
 </span></code></pre></div>
 <p>(Pour ajouter des options, voir la <a href="../add_option_block/">page dédiée</a>.)</p>
-<p>Le bloc sera ensuite créé grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423"><code>makeCommandBlock</code></a>.</p>
+<p>Pour plus d'informations : Le bloc sera ensuite créé grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423"><code>makeCommandBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>
 <p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>public/task.js</code></a>, ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils quand elle n'est pas triée. Le bloc sera nommé ainsi : <code>nomdelacommande</code></p>
 <p><strong>Exemple :</strong></p>

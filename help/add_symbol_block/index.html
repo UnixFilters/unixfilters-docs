@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ajouter-un-bloc-symbol" class="md-skip">
+        <a href="#ajouter-un-bloc-symbole" class="md-skip">
           Aller au contenu
         </a>
       
@@ -767,20 +767,21 @@
 
 
 
-<h1 id="ajouter-un-bloc-symbol">Ajouter un bloc SYMBOL</h1>
+<h1 id="ajouter-un-bloc-symbole">Ajouter un bloc SYMBOLE</h1>
+<p>Un bloc SYMBOL est un bloc générant un symbole, comme &lt;, &gt;, &gt;&gt;.</p>
 <h2 id="1-generer-le-bloc">1. Générer le bloc</h2>
 <p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js"><code>public/blocklyUnixFilters_lib.js</code></a>, ajouter le bloc dans sa catégorie correspondante.</p>
 <p><strong>Exemple :</strong> Pour ajouter le symbole exemple, il faut ajouter son nom, sa couleur et son tooltip.</p>
 <div class="language-javascript highlight"><span class="filename">blocklyUnixFilters_lib.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">SYMBOL_NAMES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;symbol_symboleExemple[]&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;symbol_symboleExemple&quot;</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">colour</span><span class="o">:</span><span class="w"> </span><span class="mf">90</span><span class="p">,</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">tooltip</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Exemple de tooltip&quot;</span><span class="p">,</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">},</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="c1">// Autres symboles</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">];</span>
 </span></code></pre></div>
-<p>Le bloc sera créé automatiquement grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L479"><code>makeSymbolBlock</code></a>.</p>
+<p>Pour plus d'informations : Le bloc sera créé automatiquement grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L479"><code>makeSymbolBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>
 <p>Dans le fichier <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js"><code>public/task.js</code></a>, ajouter le nom du bloc. L'ordre du fichier correspond à l'ordre des blocs dans la boîte à outils. Le bloc aura ce nommage <strong>symbol_nomdusymbole</strong></p>
 <p><strong>Exemple :</strong></p>
@@ -800,8 +801,8 @@
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">localLanguageStrings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">fr</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nx">categories</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">        </span><span class="c1">// Catégories</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="c1">// Catégories</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p">},</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="hll"><span class="w">        </span><span class="nx">symbol_symboleExemple</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;!!&quot;</span><span class="p">,</span>
 </span></span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="p">},</span>
