@@ -22,7 +22,7 @@ const COMMANDS = [
 ];
 ```
 
-- Dans le fichier `public/unixfilters`, ajouter la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375) **même si elle ne possède pas d'options**.
+- Dans le fichier `public/unixfilters.js`, ajouter la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375) **même si elle ne possède pas d'options**.
 
 **Exemple :**
 
@@ -35,7 +35,7 @@ const optionTooltips = {
 
 (Pour ajouter des options, voir la [page dédiée](./add_option_block.md).)
 
-Le bloc sera ensuite créé grâce à la fonction [`makeCommandBlock`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423).
+Pour plus d'informations : Le bloc sera ensuite créé grâce à la fonction [`makeCommandBlock`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L423).
 
 ## 2. Ajouter le bloc à la tâche
 
@@ -61,7 +61,7 @@ Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface
 
 **Exemple :**
 
-```javascript hl_lines="5 8"
+```javascript title="blocklyUnixFilters_lib.js" hl_lines="5 8"
 var getContext = function (display, infos, curLevel) {
   var localLanguageStrings = {
     fr: {

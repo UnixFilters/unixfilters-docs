@@ -36,7 +36,7 @@ Le bloc sera créé automatiquement grâce à la fonction [`makeOptionBlock`](ht
 
 Pour que le bloc soit affiché dans la tâche, il faut dans le fichier [`public/task.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/task.js), ajouter le nom du bloc.
 
-Le bloc sera nommé ainsi : `option_<lettre>_<type>`où le type peut être flag/field_index.
+Le bloc sera nommé ainsi : `option_<lettre>_<type>_<commande associée>`où le type peut être flag/field_index.
 
 **Exemple :**
 

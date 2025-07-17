@@ -605,6 +605,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ajouter une commande
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -616,6 +629,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remarque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remarque
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -657,6 +698,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#remarque" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remarque
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -673,12 +731,14 @@
 
 <h1 id="ajouter-une-commande">Ajouter une commande</h1>
 <ol>
-<li>Dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py">commands.py</a>, ajouter la fonction de la commande.</li>
+<li>Dans le fichier <a href="https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py"><code>exemple_checker/tests/gen/commands.py</code></a>, ajouter la fonction de la commande.</li>
 </ol>
 <p>Exemple : Pour ajouter la commande awk</p>
 <div class="language-python highlight"><span class="filename">commands.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">awk</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">run_command</span><span class="p">(</span><span class="s2">&quot;awk&quot;</span><span class="p">,</span> <span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">)</span>
 </span></code></pre></div>
+<h2 id="remarque">Remarque</h2>
+<p>La fonction doit être associée à un bloc dans l'interface, voir <a href="../add_command_block/">Ajouter un bloc COMMANDE</a></p>
 
 
 

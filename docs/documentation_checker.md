@@ -4,11 +4,11 @@ Ce projet permet d'évaluer le code envoyé depuis l'[interface](https://github.
 
 ## Déroulement
 
-Le serveur utilise le checker pour exécuter deux étapes principales :
+Le serveur utilise le checker pour exécuter trois étapes principales :
 
-- Sauvegarder le code envoyé par le front
-- Exécuter la solution avec la librairie commands.py et mettre le résultat dans test01.solout
-- Exécuter test01.solout avec le résultat attendu et envoyer au front l'objet de réponse (message + score + steps)
+- Mettre dans un fichier `solution.py` le code envoyé par le front
+- Exécuter pas-à-pas le code avec la librairie `commands.py` et mettre les étapes dans le fichier `test01.solout`
+- Comparer le code de la dernière étape `test01.solout` avec le résultat attendu, puis envoyer au front l'objet de réponse (message + score + steps)
 
 ![schema](./img/schema_logique_checker.png)
 
@@ -45,7 +45,7 @@ Le serveur utilise le checker pour exécuter deux étapes principales :
 Dans le projet unixfilters-franceIOI, le serveur [`python_lib/server.py`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/python_lib/server.py) reçoit le code depuis l'interface frontend.
 Il va ensuite :
 
-### a. Sauvegarder le code dans `solution.py``
+### a. Sauvegarder le code dans `solution.py`
 
 **Exemple :**
 Les blocs ont généré la commande :
@@ -70,7 +70,7 @@ sort(["-r"])
 head(["-n","5"])
 ```
 
-### b. Exécution via commands.py
+### b. Exécution pas-à-pas via commands.py
 
 Le serveur appelle [`exemple_checker/tests/gen/commands.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/commands.py), qui va exécuter le code. Le résultat, sous forme d'objet JSON (steps) est stocké dans [`exemple_checker/tests/files/test01.solout`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/files/test01.solout).
 
@@ -118,7 +118,7 @@ print(json.dumps(get_output(), indent=4))
 }
 ```
 
-### c. Vérification avec `checker.py`
+### c. Comparaison avec `checker.py`
 
 Le serveur appelle ensuite le [`exemple_checker/tests/gen/checker.py`](https://github.com/UnixFilters/checker/blob/main/exemple_checker/tests/gen/checker.py) avec trois arguments :
 
@@ -132,7 +132,7 @@ Le checker compare la réponse générée (`test01.solout`) et la réponse atten
 
 - Si sortie générée = sortie attendue → score = 100 + message de succès + steps
 - Si la sortie ne correspond pas → score = 0 + message d'échec + steps
-- Si une des étapes échoue → score = 0 + message d'erreur + steps
+- Si l'une des étapes échoue → score = 0 + message d'erreur + steps
 
 Un objet `result` est construit et renvoyé à l’interface.
 

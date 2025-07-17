@@ -1,4 +1,6 @@
-# Ajouter un bloc SYMBOL
+# Ajouter un bloc SYMBOLE
+
+Un bloc SYMBOL est un bloc générant un symbole, comme <, >, >>.
 
 ## 1. Générer le bloc
 
@@ -9,7 +11,7 @@ Dans le fichier [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilt
 ```javascript title="blocklyUnixFilters_lib.js"
 const SYMBOL_NAMES = [
   {
-    name: "symbol_symboleExemple[]",
+    name: "symbol_symboleExemple",
     colour: 90,
     tooltip: "Exemple de tooltip",
   },
@@ -17,7 +19,7 @@ const SYMBOL_NAMES = [
 ];
 ```
 
-Le bloc sera créé automatiquement grâce à la fonction [`makeSymbolBlock`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L479).
+Pour plus d'informations : Le bloc sera créé automatiquement grâce à la fonction [`makeSymbolBlock`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L479).
 
 ## 2. Ajouter le bloc à la tâche
 
@@ -42,7 +44,7 @@ Il faut ajouter un label, c'est ce qui est affiché sur le bloc dans l'interface
 
 **Exemple :**
 
-```javascript hl_lines="5 8"
+```javascript hl_lines="8"
 var getContext = function (display, infos, curLevel) {
   var localLanguageStrings = {
     fr: {
