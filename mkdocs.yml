@@ -21,8 +21,16 @@ theme:
     - content.code.copy
     - navigation.top
 
+plugins:
+  - glightbox
+
 markdown_extensions:
   - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -30,14 +38,18 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - footnotes
 
 nav:
   - Accueil: index.md
   - Getting started: getting_started.md
-  - Guide:
-      - Mise en place d'une tâche: help/init_task.md
-      - Ajouter un bloc: help/add_block.md
-      - Ajouter une commande: help/add_command.md
-      - Créer une catégorie: help/create_category.md
-  - Documentation JavaScript: jsdoc/index.html
-  - Documentation Checker: documentation_checker.md
+  - Librairie Blockly/JavaScript:
+      - Documentation JavaScript: jsdoc/index.html
+      - Guide:
+          - Mise en place d'une tâche: help/init_task.md
+          - Ajouter un bloc: help/add_block.md
+          - Créer une catégorie: help/create_category.md
+  - Librairie Python:
+      - Documentation Checker: documentation_checker.md
+      - Guide:
+          - Ajouter une commande: help/add_command.md
