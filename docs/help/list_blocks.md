@@ -2,6 +2,8 @@
 
 Cliquez sur 📋 pour copier le nom de l'option dans le presse-papier.
 
+## Liste des commandes et leurs options
+
 <table>
   <thead>
     <tr>
@@ -58,14 +60,33 @@ Cliquez sur 📋 pour copier le nom de l'option dans le presse-papier.
   </tbody>
 </table>
 
+## Liste des blocs symbole (<,>,>>) et d'entrée
+
+<table>
+  <thead>
+    <tr>
+      <th>Bloc</th>
+      <th>Affichage</th>
+      <th>Nom de l'option</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td>Bloc symbole supérieur à <br>(Redirection de la sortie vers un fichier)</td><td>></td><td><code>symbol_greater_than</code></td><td><button onclick="copyToClipboard('symbol_greater_than', this)">📋</button></td></tr>
+   <tr><td>Bloc symbole inférieur à</td><td><</td><td><code>symbol_less_than</code></td><td><button onclick="copyToClipboard('symbol_less_than', this)">📋</button></td></tr>
+   <tr><td>Bloc symbole double supérieur à <br>(Redirection de l'entrée depuis un fichier)</td><td>>></td><td><code>symbol_even_greater_than</code></td><td><button onclick="copyToClipboard('symbol_even_greater_than', this)">📋</button></td></tr>
+   <tr><td>Bloc entrée texte <br>(Ajout à la fin d'un fichier)</td><td>></td><td><code>text_input</code></td><td><button onclick="copyToClipboard('text_input', this)">📋</button></td></tr>
+  </tbody>
+</table>
+
 <script>
   function copyToClipboard(text, button) {
     navigator.clipboard.writeText(text).then(() => {
+      const originalText = button.textContent;
       button.textContent = '✅'; 
-      setTimeout(() => {// Réinitialiser l'emoji après 2 secondes
+      setTimeout(() => {
+        button.textContent = originalText;
       }, 2000);
     });
   }
 </script>
-
-// Ajouter le tableau de symbole et option
