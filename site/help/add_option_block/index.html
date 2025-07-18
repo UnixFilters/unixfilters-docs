@@ -578,6 +578,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooltip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tooltips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -834,18 +857,23 @@
 </table>
 <h2 id="1-generer-le-bloc">1. Générer le bloc</h2>
 <p>Pour que la librairie puisse générer ce bloc, il faut :</p>
-<p>Dans le fichier <code>public/unixfilters.js</code>, ajouter l’option sous la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a>.</p>
-<p><strong>Exemple :</strong> Pour ajouter l'option <em>inventée</em> -x[FIELD_INDEX], il faut ajouter sa lettre (x), son type (field index) et son tooltip (indication qui sera affichée lorsqu'on passe la souris sur le bloc) avec la commande correspondante, on prend l'exemple de tail ici.</p>
+<p>Dans le fichier <code>public/unixfilters.js</code>, ajouter l’option sous la commande dans <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375"><code>optionTooltips</code></a>. Attention, il faut préciser si l'option est en majuscule ou en minuscule avec <code>case</code>.</p>
+<p><strong>Exemple :</strong> Pour ajouter l'option <em>inventée</em> -x[FIELD_INDEX], il faut ajouter sa lettre (x), son type (field index) et son tooltip (voir <a href="../tooltip/">la documentation sur les tooltips</a>) avec la commande correspondante, on prend l'exemple de tail ici.</p>
 <div class="language-javascript highlight"><span class="filename">unixfilters.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">optionTooltips</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// Autres commandes</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">tail</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">n</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nx">field_index</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tail : afficher les n dernières lignes (par défaut : 10)&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">field_index</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tail : afficher les n derniers octets&quot;</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">field_index</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tail : affiche x&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="c1">// Ajout de la nouvelle option x</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">};</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="k">case</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;lower&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Autres options</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">// Ajout de la nouvelle option x</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nx">field_index</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tail : description du tooltip&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="k">case</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;lower&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Ou &quot;upper&quot; si le flag doit être en majuscule</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">};</span>
 </span></code></pre></div>
 <p>Le bloc sera créé automatiquement grâce à la fonction <a href="https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js#L343"><code>makeOptionBlock</code></a>.</p>
 <h2 id="2-ajouter-le-bloc-a-la-tache">2. Ajouter le bloc à la tâche</h2>

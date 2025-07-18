@@ -53,6 +53,7 @@ nav:
           - Ajouter un nouveau bloc: help/add_new_block.md
           - Créer une catégorie: help/create_category.md
           - Liste des blocs existants: help/list_blocks.md
+          - Tooltips: help/tooltip.md
   - Librairie Python:
       - Documentation Checker: documentation_checker.md
       - Guide:

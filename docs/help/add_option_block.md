@@ -13,9 +13,9 @@ Lorsque vous ajoutez une option, vous devez spécifier un **type**.
 
 Pour que la librairie puisse générer ce bloc, il faut :
 
-Dans le fichier `public/unixfilters.js`, ajouter l’option sous la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375).
+Dans le fichier `public/unixfilters.js`, ajouter l’option sous la commande dans [`optionTooltips`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/unixfilters.js#L375). Attention, il faut préciser si l'option est en majuscule ou en minuscule avec `case`.
 
-**Exemple :** Pour ajouter l'option _inventée_ -x\[FIELD_INDEX\], il faut ajouter sa lettre (x), son type (field index) et son tooltip (indication qui sera affichée lorsqu'on passe la souris sur le bloc) avec la commande correspondante, on prend l'exemple de tail ici.
+**Exemple :** Pour ajouter l'option _inventée_ -x\[FIELD_INDEX\], il faut ajouter sa lettre (x), son type (field index) et son tooltip (voir [la documentation sur les tooltips](./tooltip.md)) avec la commande correspondante, on prend l'exemple de tail ici.
 
 ```javascript title="unixfilters.js"
 const optionTooltips = {
@@ -23,9 +23,14 @@ const optionTooltips = {
   tail: {
     n: {
       field_index: "tail : afficher les n dernières lignes (par défaut : 10)",
+      case: "lower",
     },
-    c: { field_index: "tail : afficher les n derniers octets" },
-    x: { field_index: "tail : affiche x" }, // Ajout de la nouvelle option x
+    // Autres options
+    // Ajout de la nouvelle option x
+    x: {
+      field_index: "tail : description du tooltip",
+      case: "lower", // Ou "upper" si le flag doit être en majuscule
+    },
   },
 };
 ```

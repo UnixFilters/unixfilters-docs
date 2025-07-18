@@ -4,7 +4,7 @@
 
 - Dans [`public/blocklyUnixFilters_lib.js`](https://github.com/UnixFilters/unixfilters-franceIOI/blob/main/public/blocklyUnixFilters_lib.js), ajouter la commande à la liste `COMMANDS` dans sa catégorie :
 
-**Exemple :** Pour ajouter une commande nommée `exemple`, il faut ajouter son nom, tooltip et format à la liste.
+**Exemple :** Pour ajouter une commande nommée `exemple`, il faut ajouter son nom, tooltip et format à la liste. (voir la [documentation](./tooltip.md) sur les tooltips pour plus d'informations)
 
 ```javascript title="blocklyUnixFilters_lib.js"
 const COMMANDS = [
@@ -29,7 +29,7 @@ const COMMANDS = [
 ```javascript title="unixfilters.js"
 const optionTooltips = {
   cat: {},
-  exemple:{}
+  exemple: {}
 // Autres commandes
 ```
 
